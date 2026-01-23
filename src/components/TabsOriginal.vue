@@ -26,7 +26,7 @@ const setActiveTab = (index) => {
                     <span class="relative pb-[3px] inline-block">
                         {{ tab.label }}
                         <span :class="[
-                            'absolute bottom-0 -left-[20%] w-[140%] h-[1.5px] bg-black transition-transform duration-300 origin-left',
+                            'absolute bottom-0 -left-[20%] w-[140%] h-[1px] bg-black transition-transform duration-300 origin-left',
                             activeIndex === index ? 'scale-x-100' : 'scale-x-0'
                         ]"></span>
                     </span>
