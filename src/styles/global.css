@@ -8,7 +8,8 @@
   html,
   body {
     font-family: var(--font-sans);
-    scrollbar-gutter: stable;
+    height: 100%;
+    margin: 0;
   }
   strong,
   b {
