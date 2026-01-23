@@ -1,0 +1,34 @@
+---
+const { currentLocale } = Astro;
+const path = Astro.url.pathname;
+
+function getPath(lang: string) {
+  const parts = path.split("/");
+  if (parts[1] === "en") {
+    parts.splice(1, 1);
+  }
+  if (lang === "en") {
+    parts.splice(1, 0, "en");
+  }
+  const newPath = parts.join("/") || "/";
+  return newPath.replace(/\/+/g, "/");
+}
+---
+
+<div
+  class="flex items-center space-x-2 text-[10px] uppercase tracking-wider font-medium text-gray-500"
+>
+  <a
+    href={getPath("th")}
+    class={`text-xl ${currentLocale === "th" ? "" : "opacity-20"}`}
+  >
+    🇹🇭
+  </a>
+  <span class="w-px h-3 bg-gray-300"></span>
+  <a
+    href={getPath("en")}
+    class={`text-xl ${currentLocale === "en" ? "" : "opacity-20"}`}
+  >
+    🏴󠁧󠁢󠁥󠁮󠁧󠁿
+  </a>
+</div>

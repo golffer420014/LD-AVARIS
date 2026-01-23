@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Times New Roman", Times, serif;
+}
+
+@layer base {
+  html,
+  body {
+    font-family: var(--font-sans);
+    scrollbar-gutter: stable;
+  }
+  strong,
+  b {
+    font-weight: bold;
+  }
+}
+
+.bg-base {
+  @apply bg-[#F9F9F9];
+}
+.bg-card {
+  @apply bg-[#FFFFFF];
+}

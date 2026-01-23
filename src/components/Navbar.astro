@@ -1,0 +1,92 @@
+---
+import LanguagePicker from "./LanguagePicker.astro";
+import {
+  getLangFromUrl,
+  useTranslations,
+  getLocalizedPath,
+} from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const menu = [
+  {
+    label: t("nav.property"),
+    content: t("nav.property"),
+    href: getLocalizedPath("/property", lang),
+  },
+  {
+    label: t("nav.manpower"),
+    content: t("nav.manpower"),
+    href: getLocalizedPath("/manpower", lang),
+  },
+  {
+    label: t("nav.placement"),
+    content: t("nav.placement"),
+    href: getLocalizedPath("/placement", lang),
+  },
+  {
+    label: t("nav.insurance"),
+    content: t("nav.insurance"),
+    href: getLocalizedPath("/insurance", lang),
+  },
+  {
+    label: t("nav.visa"),
+    content: t("nav.visa"),
+    href: getLocalizedPath("/visa", lang),
+  },
+  {
+    label: t("nav.legal"),
+    content: t("nav.legal"),
+    href: getLocalizedPath("/legal", lang),
+  },
+  {
+    label: t("nav.logistic"),
+    content: t("nav.logistic"),
+    href: getLocalizedPath("/logistic", lang),
+  },
+  {
+    label: t("nav.trading"),
+    content: t("nav.trading"),
+    href: getLocalizedPath("/trading", lang),
+  },
+];
+---
+
+<nav class="h-[50px] bg-white">
+  <div
+    class="flex items-center justify-between h-full max-w-6xl mx-auto relative border-b border-gray-100"
+  >
+    <!-- Logo -->
+    <a
+      href={getLocalizedPath("/", lang)}
+      class="text-[1.7em] mt-2 font-normal tracking-[0.4em] text-black absolute -left-12"
+    >
+      AVARIS
+    </a>
+
+    <!-- Navigation Links -->
+    <div
+      class="flex items-center space-x-[18px] text-xs text-gray-800 uppercase absolute left-1/2 -translate-x-1/2 mt-0.5"
+    >
+      {
+        menu.map((item, index) => (
+          <>
+            <a href={item.href} class="hover:text-black transition-colors">
+              {item.label}
+            </a>
+
+            {index !== menu.length - 1 && (
+              <span class="bg-gray-200 w-[1.8px] h-[14px]" />
+            )}
+          </>
+        ))
+      }
+    </div>
+
+    <!-- Language Picker -->
+    <div class="absolute right-0">
+      <LanguagePicker />
+    </div>
+  </div>
+</nav>
