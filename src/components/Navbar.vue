@@ -96,7 +96,7 @@ onMounted(() => {
                         :class="['text-xl transition-opacity', currLang === 'th' ? 'opacity-100' : 'opacity-20']">🇹🇭</a>
                     <span class="w-px h-3 bg-gray-300"></span>
                     <a :href="getLangPath('en')"
-                        :class="['text-xl transition-opacity', currLang === 'en' ? 'opacity-100' : 'opacity-20']">🏴󠁧󠁢󠁥󠁮󠁧󠁿</a>
+                        :class="['text-xl transition-opacity', currLang === 'en' ? 'opacity-100' : 'opacity-20']">🇬🇧</a>
                 </div>
 
                 <button @click="toggleMenu"
@@ -141,7 +141,7 @@ onMounted(() => {
                         <a :href="getLangPath('th')"
                             :class="['text-3xl transition-opacity', currLang === 'th' ? 'opacity-100' : 'opacity-20']">🇹🇭</a>
                         <a :href="getLangPath('en')"
-                            :class="['text-3xl transition-opacity', currLang === 'en' ? 'opacity-100' : 'opacity-20']">🏴󠁧󠁢󠁥󠁮󠁧󠁿</a>
+                            :class="['text-3xl transition-opacity', currLang === 'en' ? 'opacity-100' : 'opacity-20']">🇬🇧</a>
                     </div>
                 </div>
             </div>
