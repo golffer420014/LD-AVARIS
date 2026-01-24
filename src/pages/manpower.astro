@@ -1,7 +1,31 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import TabsOriginal from "@/components/TabsOriginal.vue";
+import PhotoGallery from "@/components/PhotoGallery.vue";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+// Gallery Images
+import img1 from "@/assets/img/1.jpg";
+import img2 from "@/assets/img/2.jpg";
+import img3 from "@/assets/img/3.jpg";
+import img4 from "@/assets/img/4.jpg";
+import img5 from "@/assets/img/5.jpg";
+import img6 from "@/assets/img/6.jpg";
+import img7 from "@/assets/img/7.jpg";
+import img8 from "@/assets/img/8.jpg";
+import img9 from "@/assets/img/9.jpg";
+
+const galleryImages = [
+  { src: img1.src, width: 1200, height: 800, alt: "Manpower Deployment 1" },
+  { src: img2.src, width: 1200, height: 800, alt: "Manpower Deployment 1" },
+  { src: img3.src, width: 1200, height: 800, alt: "Manpower Deployment 2" },
+  { src: img4.src, width: 1200, height: 800, alt: "Manpower Training" },
+  { src: img5.src, width: 1200, height: 800, alt: "Manpower Screening" },
+  { src: img6.src, width: 1200, height: 800, alt: "Logistics Setup" },
+  { src: img7.src, width: 1200, height: 800, alt: "On-site Management" },
+  { src: img8.src, width: 1200, height: 800, alt: "Team Preparation" },
+  { src: img9.src, width: 1200, height: 800, alt: "Global Recruitment" },
+];
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -47,7 +71,7 @@ const demoTabs = [
 
         <div class="w-[32rem] mx-auto">
           <h3
-            class="mb-4 text-center font-bold"
+            class="mb-4 text-center font-bold pr-[44px] -translate-y-[4px]"
             set:html={t("manpower.services.subtitle")}
           />
 
@@ -62,7 +86,16 @@ const demoTabs = [
             }
           </div>
         </div>
+        <div class="mt-8">
+          <PhotoGallery images={galleryImages} client:load />
+        </div>
       </div>
+      <div slot="tab-1" class="x-auto pt-10 text-gray-800"></div>
     </TabsOriginal>
   </div>
 </Layout>
+
+<script>
+  // This is to make sure galleryImages is available if needed in client-side script
+  // But we actually defined it in the frontmatter above (planning to add it)
+</script>
