@@ -18,7 +18,7 @@ const props = defineProps({
             </div>
 
             <!-- Country Sectors -->
-            <div class="grid grid-cols-1 md:grid-cols-2 text-xs md:text-[10px] md:gap-0">
+            <div class="grid grid-cols-1 md:grid-cols-2 text-xs md:text-[10px] gap-4 md:gap-0">
                 <div v-for="(sector, sIndex) in country.sectors" :key="sIndex" class="flex flex-col">
                     <!-- Sector Header -->
                     <div class="border border-gray-300 bg-white p-3 text-center"
