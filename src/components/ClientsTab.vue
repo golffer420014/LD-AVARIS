@@ -18,21 +18,22 @@ const props = defineProps({
             </div>
 
             <!-- Country Sectors -->
-            <div class="grid grid-cols-1 md:grid-cols-2 md:gap-0">
+            <div class="grid grid-cols-1 md:grid-cols-3 text-xs md:text-[10px] md:gap-0">
                 <div v-for="(sector, sIndex) in country.sectors" :key="sIndex" class="flex flex-col">
                     <!-- Sector Header -->
                     <div class="border border-gray-300 bg-white p-3 text-center"
                         :class="{ 'md:border-r-0': sIndex === 0 && country.sectors.length > 1 }">
-                        <h3 class="text-xs font-semibold tracking-wider uppercase">{{ sector.name }}</h3>
+                        <h3 class=" font-semibold tracking-wider uppercase">{{ sector.name }}</h3>
                     </div>
 
                     <!-- Clients List -->
-                    <div class="border border-t-0 border-gray-300 px-4 py-6 flex-1 bg-white"
+                    <div class="border border-t-0 border-gray-300 px-4 py-6 md:py-2 md:min-h-[100px] flex-1 bg-white"
                         :class="{ 'md:border-r-0': sIndex === 0 && country.sectors.length > 1 }">
                         <ul class="grid grid-cols-2">
                             <li v-for="(client, clIndex) in sector.clients" :key="clIndex"
-                                class="flex items-start space-x-2 text-[13px]  font-light">
-                                <span class=" mt-2 w-1 h-1 rounded-full bg-black shrink-0"></span>
+                                class="flex items-start space-x-2  font-light"
+                                :class="{ 'col-span-2': sector.clients.length === 1 }">
+                                <span class="mt-2 md:mt-1 w-1 h-1 rounded-full bg-black shrink-0"></span>
                                 <span>{{ client }}</span>
                             </li>
                         </ul>
