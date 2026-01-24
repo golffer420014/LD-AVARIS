@@ -9,7 +9,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="space-y-8 py-8 px-6">
+    <div class="space-y-8 py-8 px-6 md:px-0 md:pt-14">
         <div v-for="(country, cIndex) in countries" :key="cIndex" class="space-y-3">
             <!-- Country Header -->
             <div class="flex items-center space-x-4 border-b border-gray-100">
