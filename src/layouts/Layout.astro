@@ -1,11 +1,15 @@
 ---
 import "../styles/global.css";
-import Navbar from "../components/Navbar.astro";
+import Navbar from "../components/Navbar.vue";
 import Footer from "../components/Footer.astro";
+import { getLangFromUrl } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const currentPath = Astro.url.pathname;
 ---
 
 <!doctype html>
-<html lang={Astro.currentLocale}>
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -17,7 +21,7 @@ import Footer from "../components/Footer.astro";
   </head>
   <body class="h-screen overflow-hidden bg-base">
     <div class="h-full overflow-y-scroll overflow-x-hidden relative">
-      <Navbar />
+      <Navbar lang={lang} currentPath={currentPath} client:load />
       <slot />
       <Footer />
     </div>
