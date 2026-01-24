@@ -34,7 +34,7 @@ onUnmounted(() => {
     <div :id="galleryId" class="grid grid-cols-3 gap-4 my-12">
         <a v-for="(image, index) in images" :key="index" :href="image.src" :data-pswp-width="image.width"
             :data-pswp-height="image.height" target="_blank" rel="noreferrer"
-            class="aspect-square overflow-hidden group relative bg-gray-100 rounded-sm">
+            class="aspect-square overflow-hidden group relative bg-gray-100">
             <img :src="image.src" :alt="image.alt || 'Gallery image'"
                 class="w-full h-full object-cover transition-transform duration-500" />
             <div
