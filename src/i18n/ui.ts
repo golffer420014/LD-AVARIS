@@ -84,6 +84,7 @@ export const ui = {
                 ]
             }
         ],
+        'footer.rights': '© {year} บริษัทจัดหางาน อวาริส อินเตอร์เนชั่นแนล จํากัด สงวนลิขสิทธิ์ทั้งหมด เป็นบริษัทย่อยที่บริษัท อวาริส กรุ๊ป จํากัด ถือหุ้นทั้งหมด และดําเนินการภายใต้โครงสร้างการถือหุ้นและการกํากับดูแลของบริษัทแม่เดียวกัน',
     },
     en: {
         'nav.property': 'Property',
@@ -163,5 +164,6 @@ export const ui = {
                 ]
             }
         ],
+        'footer.rights': '@ {year} Avaris International Manpower Co., Ltd. All Rights Reserved is a wholly owned subsidiary of Avaris Group Co., Ltd., legally operating under the same parent company.',
     },
 } as const;
