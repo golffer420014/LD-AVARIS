@@ -130,7 +130,8 @@ onMounted(() => {
             </div>
 
             <div class="flex-1 overflow-y-auto px-10 py-4">
-                <div class="flex flex-col space-y-2 uppercase tracking-[0.2em] text-sm font-light">
+                <div :class="{ 'tracking-normal': currLang === 'th', 'tracking-[0.2em]': currLang === 'en' }"
+                    class="flex flex-col space-y-2 uppercase text-sm font-light">
                     <a v-for="(item, index) in menu" :key="index" :href="item.href" @click="isMenuOpen = false"
                         class="text-gray-800 font-semibold hover:text-black transition-colors py-2 flex justify-between items-center group">
                         {{ item.label }}
