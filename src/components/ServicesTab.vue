@@ -30,7 +30,7 @@ const currentLang = computed(() => props.lang);
         </h2>
 
         <p :class="{
-            'text-[.65em] md:text-[.92em] leading-relaxed px-[4px]': currentLang === 'th',
+            'text-[.65em] md:text-[.92em] leading-relaxed px-[2px]': currentLang === 'th',
             'text-[.65em] md:text-[.99em] px-[10px]': currentLang === 'en',
         }" class="font-light mb-8 text-pretty text-center  md:px-0" v-html="t('manpower.services.description')">
         </p>
