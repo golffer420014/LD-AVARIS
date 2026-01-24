@@ -1,8 +1,15 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import TabsOriginal from "@/components/TabsOriginal.vue";
-import PhotoGallery from "@/components/PhotoGallery.vue";
+import ClientsTab from "@/components/ClientsTab.vue";
+import ServicesTab from "@/components/ServicesTab.vue";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// Client Data
+const clientData = t("manpower.clients" as any);
 
 // Gallery Images
 import img1 from "@/assets/img/1.jpg";
@@ -26,9 +33,6 @@ const galleryImages = [
   { src: img8.src, width: 1200, height: 800, alt: "Team Preparation" },
   { src: img9.src, width: 1200, height: 800, alt: "Global Recruitment" },
 ];
-
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
 
 const demoTabs = [
   {
@@ -57,47 +61,13 @@ const demoTabs = [
 <Layout>
   <div class="bg-base min-h-screen md:pt-8">
     <TabsOriginal tabs={demoTabs} client:load>
-      <div slot="tab-0" class="max-w-3xl mx-auto text-gray-800">
-        <h2
-          class="text-[18px] md:text-[26px] tracking-[0.2em] uppercase my-12 text-center text-black"
-        >
-          {t("manpower.services.title")}
-        </h2>
-
-        <p
-          class="text-[.65em] md:text-[.99em] font-light mb-8 text-pretty text-center px-[10px] md:px-0"
-          set:html={t("manpower.services.description")}
-        />
-
-        <div class="md:w-[45rem] md:ml-[3.5rem] px-4 md:px-0 mx-auto">
-          <h3
-            class="mb-4 text-center font-bold md:pr-[44px] -translate-y-[4px]"
-            set:html={t("manpower.services.subtitle")}
-          />
-
-          <div class="grid grid-cols-1">
-            {
-              [1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
-                <div class="flex items-start space-x-2">
-                  <span class="text-black font-normal mt-[5px] md:mt-2 w-[4px] h-[4px] md:w-[5px] md:h-[5px] rounded-full bg-black shrink-0" />
-                  <div class="text-[0.6em] md:text-[0.9em] leading-relaxed">
-                    <span class="md:min-w-[100px] inline-block">
-                      {t(`manpower.services.item${i}.label` as any)}
-                    </span>
-                    <span class="">
-                      {t(`manpower.services.item${i}.description` as any)}
-                    </span>
-                  </div>
-                </div>
-              ))
-            }
-          </div>
-        </div>
-        <div class="mt-10 md:mt-22 px-4 md:px-0">
-          <PhotoGallery images={galleryImages} client:load />
-        </div>
+      <div slot="tab-0">
+        <ServicesTab lang={lang} images={galleryImages} client:load />
       </div>
-      <div slot="tab-1" class="x-auto pt-10 text-gray-800"></div>
+      <div slot="tab-1"></div>
+      <div slot="tab-2">
+        <ClientsTab countries={clientData as any} client:load />
+      </div>
     </TabsOriginal>
   </div>
 </Layout>

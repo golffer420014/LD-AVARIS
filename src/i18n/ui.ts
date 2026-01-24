@@ -44,6 +44,46 @@ export const ui = {
         'manpower.services.item7.description': 'ประสานงานการเคลื่อนย้ายแรงงานไปยังไซต์งานต่างประเทศ',
         'manpower.services.item8.label': 'การติดตามและประกันคุณภาพ (Assurance)',
         'manpower.services.item8.description': 'ติดตามผลอย่างต่อเนื่องตลอดกระบวนการจ้างงาน',
+        'manpower.clients': [
+            {
+                name: "โครเอเชีย (Croatia)",
+                flag: "🇭🇷",
+                sectors: [
+                    {
+                        name: "การก่อสร้างและวิศวกรรม (Construction & Engineering)",
+                        clients: ["Agrosheep d.o.o.", "Vertiv Croatia d.o.o.", "Novi Mediji d.o.o."]
+                    }
+                ]
+            },
+            {
+                name: "อิสราเอล (Israel)",
+                flag: "🇮🇱",
+                sectors: [
+                    {
+                        name: "การก่อสร้างและวิศวกรรม (Construction & Engineering)",
+                        clients: ["Dori Construction Company"]
+                    },
+                    {
+                        name: "การบริการและค้าปลีก (Hospitality & Retail)",
+                        clients: ["Alexander (Restaurant Chain)", "Electra Consumer Products"]
+                    }
+                ]
+            },
+            {
+                name: "อิตาลี (Italy)",
+                flag: "🇮🇹",
+                sectors: [
+                    {
+                        name: "การก่อสร้างและวิศวกรรม (Construction & Engineering)",
+                        clients: ["Impergilo S.p.A.", "Webuild S.p.A.", "Salini Impregilo S.p.A."]
+                    },
+                    {
+                        name: "การให้คำปรึกษาและการจัดการ (Consultancy & Management)",
+                        clients: ["Orienta S.p.A."]
+                    }
+                ]
+            }
+        ],
     },
     en: {
         'nav.property': 'Property',
@@ -83,5 +123,45 @@ export const ui = {
         'manpower.services.item7.description': 'Coordinating the mobilization to overseas worksites.',
         'manpower.services.item8.label': 'Assurance',
         'manpower.services.item8.description': 'Maintain continuous follow-up throughout the employment process.',
+        'manpower.clients': [
+            {
+                name: "Croatia",
+                flag: "🇭🇷",
+                sectors: [
+                    {
+                        name: "Construction & Engineering",
+                        clients: ["Agrosheep d.o.o.", "Vertiv Croatia d.o.o.", "Novi Mediji d.o.o."]
+                    }
+                ]
+            },
+            {
+                name: "Israel",
+                flag: "🇮🇱",
+                sectors: [
+                    {
+                        name: "Construction & Engineering",
+                        clients: ["Dori Construction Company"]
+                    },
+                    {
+                        name: "Hospitality & Retail",
+                        clients: ["Alexander (Restaurant Chain)", "Electra Consumer Products"]
+                    }
+                ]
+            },
+            {
+                name: "Italy",
+                flag: "🇮🇹",
+                sectors: [
+                    {
+                        name: "Construction & Engineering",
+                        clients: ["Impergilo S.p.A.", "Webuild S.p.A.", "Salini Impregilo S.p.A."]
+                    },
+                    {
+                        name: "Consultancy & Management",
+                        clients: ["Orienta S.p.A."]
+                    }
+                ]
+            }
+        ],
     },
 } as const;
