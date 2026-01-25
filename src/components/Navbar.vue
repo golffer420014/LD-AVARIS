@@ -101,8 +101,7 @@ onMounted(() => {
                     <button @click="isLangOpen = !isLangOpen"
                         class="flex items-center space-x-2.5 px-3 py-1.5 transition-colors group">
                         <img :src="currLang === 'th' ? '/assets/flag/thailand.png' : '/assets/flag/unitedstate.png'"
-                            :alt="currLang"
-                            class="w-6 h-4.5 rounded-sm object-cover border border-gray-100 shadow-sm" />
+                            :alt="currLang" class="w-6 h-4.5 rounded-sm  border border-gray-100 shadow-sm" />
                     </button>
 
                     <!-- Dropdown Menu -->
@@ -116,12 +115,12 @@ onMounted(() => {
                             <a :href="getLangPath('th')"
                                 class="flex items-center space-x-3 px-2 py-2 transition-colors">
                                 <img src="/assets/flag/thailand.png" alt="TH"
-                                    class="w-6 h-4.5 rounded-sm object-cover border border-gray-100" />
+                                    class="w-6 h-4.5 rounded-sm  border border-gray-100" />
                             </a>
                             <a :href="getLangPath('en')"
                                 class="flex items-center space-x-3 px-2 py-2 transition-colors">
                                 <img src="/assets/flag/unitedstate.png" alt="EN"
-                                    class="w-6 h-4.5 rounded-sm object-cover border border-gray-100" />
+                                    class="w-6 h-4.5 rounded-sm  border border-gray-100" />
                             </a>
                         </div>
                     </transition>
@@ -175,8 +174,7 @@ onMounted(() => {
                                 class="w-full flex items-center justify-between transition-colors">
                                 <div class="flex items-center space-x-3">
                                     <img :src="currLang === 'th' ? '/assets/flag/thailand.png' : '/assets/flag/unitedstate.png'"
-                                        :alt="currLang"
-                                        class="w-8 h-6 rounded-sm object-cover border border-gray-200 shadow-sm" />
+                                        :alt="currLang" class="w-8 h-6 rounded-sm  border border-gray-200 shadow-sm" />
                                     <span class="text-sm  uppercase tracking-widest text-gray-700">
                                         {{ currLang === 'th' ? 'ไทย (TH)' : 'ENGLISH (EN)' }}
                                     </span>
@@ -196,14 +194,14 @@ onMounted(() => {
                                     <a :href="getLangPath('th')"
                                         class="flex items-center space-x-4 px-5 py-4 transition-colors">
                                         <img src="/assets/flag/thailand.png" alt="TH"
-                                            class="w-8 h-6 rounded-sm object-cover border border-gray-100" />
+                                            class="w-8 h-6 rounded-sm  border border-gray-100" />
                                         <span :class="['text-sm tracking-wider']">ไทย
                                             (TH)</span>
                                     </a>
                                     <a :href="getLangPath('en')"
                                         class="flex items-center space-x-4 px-5 py-4 transition-colors border-t border-gray-50">
                                         <img src="/assets/flag/unitedstate.png" alt="EN"
-                                            class="w-8 h-6 rounded-sm object-cover border border-gray-100" />
+                                            class="w-8 h-6 rounded-sm  border border-gray-100" />
                                         <span :class="['text-sm tracking-wider']">ENGLISH
                                             (EN)</span>
                                     </a>
