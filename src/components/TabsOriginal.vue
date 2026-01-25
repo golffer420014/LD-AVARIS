@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 
 const props = defineProps({
     tabs: {
@@ -8,11 +8,31 @@ const props = defineProps({
     }
 });
 
-const activeIndex = ref(0);
+const activeTabSlug = ref('');
 
 const setActiveTab = (index) => {
-    activeIndex.value = index;
+    const tabSlug = props.tabs[index].slug;
+    activeTabSlug.value = tabSlug;
+
+    // Update URL without reloading
+    if (tabSlug) {
+        const url = new URL(window.location.href);
+        url.searchParams.set('tab', tabSlug);
+        window.history.pushState({}, '', url);
+    }
 };
+
+onMounted(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const tabParam = urlParams.get('tab');
+
+    if (tabParam) {
+        activeTabSlug.value = tabParam;
+    } else if (props.tabs.length > 0) {
+        // Default to first tab slug if no param
+        activeTabSlug.value = props.tabs[0].slug;
+    }
+});
 </script>
 
 <template>
@@ -27,7 +47,7 @@ const setActiveTab = (index) => {
                         {{ tab.label }}
                         <span :class="[
                             'absolute bottom-0 -left-[20%] w-[140%] h-[1px] bg-black transition-transform duration-300 origin-left',
-                            activeIndex === index ? 'scale-x-100' : 'scale-x-0'
+                            activeTabSlug === tab.slug ? 'scale-x-100' : 'scale-x-0'
                         ]"></span>
                     </span>
                 </button>
@@ -36,7 +56,7 @@ const setActiveTab = (index) => {
 
         <!-- Tab Contents (No Animation as requested) -->
         <div class="tab-panels relative">
-            <div v-for="(tab, index) in tabs" :key="index" v-show="activeIndex === index" class="tab-panel">
+            <div v-for="(tab, index) in tabs" :key="index" v-show="activeTabSlug === tab.slug" class="tab-panel">
                 <slot :name="`tab-${index}`" :tab="tab">
                     <div class="flex items-center justify-center text-center">
                         <p class=" font-light leading-relaxed tracking-wide italic quote">
