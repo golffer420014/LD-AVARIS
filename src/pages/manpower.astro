@@ -10,6 +10,7 @@ const t = useTranslations(lang);
 
 // Client Data
 const clientData = t("manpower.clients" as any);
+const workforceData = t("manpower.workforces" as any);
 
 // Gallery Images
 import img1 from "@/assets/img/1.jpg";
@@ -21,6 +22,7 @@ import img6 from "@/assets/img/6.jpg";
 import img7 from "@/assets/img/7.jpg";
 import img8 from "@/assets/img/8.jpg";
 import img9 from "@/assets/img/9.jpg";
+import Workforces from "@/components/Workforces.vue";
 
 const galleryImages = [
   { src: img1.src, width: 1200, height: 800, alt: "Manpower Deployment 1" },
@@ -64,9 +66,11 @@ const demoTabs = [
       <div slot="tab-0">
         <ServicesTab lang={lang} images={galleryImages} client:load />
       </div>
-      <div slot="tab-1"></div>
+      <div slot="tab-1">
+        <Workforces lang={lang} data={workforceData} client:load />
+      </div>
       <div slot="tab-2">
-        <ClientsTab countries={clientData as any} client:load />
+        <ClientsTab lang={lang} countries={clientData} client:load />
       </div>
     </TabsOriginal>
   </div>

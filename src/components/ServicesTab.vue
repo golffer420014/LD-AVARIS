@@ -36,25 +36,24 @@ const currentLang = computed(() => props.lang);
         </p>
 
         <div class="md:w-180 md:ml-14 px-4 md:px-0 mx-auto">
-            <h3 class="mb-4 text-center font-bold md:pr-[44px] -translate-y-[4px]"
-                v-html="t('manpower.services.subtitle')">
+            <h3 class="mb-4 text-center font-bold md:pr-[44px] -translate-y-[4px]">
+                <div class="border-b-2  border-[#CADDF0] inline-block w-[100px]"
+                    v-html="t('manpower.services.subtitle')"></div>
             </h3>
 
-            <div class="grid grid-cols-1">
-                <div v-for="i in [1, 2, 3, 4, 5, 6, 7, 8]" :key="i" class="flex items-start space-x-2">
-                    <span
-                        class="text-black font-normal mt-[5px] md:mt-2 w-[4px] h-[4px] md:w-[5px] md:h-[5px] rounded-full bg-black shrink-0"></span>
+            <div class="grid grid-cols-2 gap-2">
+                <div v-for="i in [1, 2, 3, 4, 5, 6, 7, 8]" :key="i" class="space-y-2 space-x-2">
                     <div :class="{
                         'md:min-w-[200px] text-[.6em] md:text-[.8em]': currentLang === 'th',
                         'md:min-w-[120px] text-[.6em] md:text-[.9em]': currentLang === 'en',
-                    }" class="leading-relaxed">
-                        <span :class="{
-                            'md:min-w-[200px]': currentLang === 'th',
-                            'md:min-w-[120px]': currentLang === 'en',
-                        }" class=" inline-block font-bold md:font-normal">
+                    }" class="bg-card  p-2 h-full rounded-md shadow-sm">
+                        <div :class="{
+                            '': currentLang === 'th',
+                            '': currentLang === 'en',
+                        }" class=" font-bold">
                             {{ t(`manpower.services.item${i}.label`) }}
-                        </span>
-                        <span>
+                        </div>
+                        <span class="text-neutral-500">
                             {{ t(`manpower.services.item${i}.description`) }}
                         </span>
                     </div>

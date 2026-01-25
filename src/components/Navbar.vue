@@ -2,7 +2,7 @@
 import { ref, onMounted, computed } from 'vue';
 import { ui, defaultLang } from '@/i18n/ui';
 import { getLocalizedPath } from '@/i18n/utils';
-import { X } from 'lucide-vue-next';
+import { X, ChevronDown } from 'lucide-vue-next';
 
 const props = defineProps({
     lang: {
@@ -17,6 +17,8 @@ const props = defineProps({
 const currLang = computed(() => props.lang);
 
 const isMenuOpen = ref(false);
+const isLangOpen = ref(false);
+const isMobileLangOpen = ref(false);
 const scrollContainer = ref(null);
 
 const t = (key) => {
@@ -59,6 +61,13 @@ const toggleMenu = () => {
 
 onMounted(() => {
     scrollContainer.value = document.querySelector('.overflow-y-scroll');
+
+    // Click outside listener for language dropdown
+    window.addEventListener('click', (e) => {
+        if (!e.target.closest('.lang-dropdown')) {
+            isLangOpen.value = false;
+        }
+    });
 });
 
 // Watch for route changes (if any client side) or just cleanup
@@ -88,17 +97,39 @@ onMounted(() => {
                 </template>
             </div>
 
-            <!-- Desktop Language & Burger -->
-            <div class="flex items-center space-x-4 lg:absolute lg:right-0">
-                <div
-                    class="hidden lg:flex items-center space-x-2 text-[10px] uppercase tracking-wider font-medium text-gray-500">
-                    <a :href="getLangPath('th')"
-                        :class="['text-xl transition-opacity', currLang === 'th' ? 'opacity-100' : 'opacity-20']">🇹🇭</a>
-                    <span class="w-px h-3 bg-gray-300"></span>
-                    <a :href="getLangPath('en')"
-                        :class="['text-xl transition-opacity', currLang === 'en' ? 'opacity-100' : 'opacity-20']">🇬🇧</a>
-                </div>
+            <!-- Desktop Language Dropdown -->
+            <div class="hidden lg:block lg:absolute lg:right-0">
+                <div class="relative lang-dropdown">
+                    <button @click="isLangOpen = !isLangOpen"
+                        class="flex items-center space-x-2.5 px-3 py-1.5 transition-colors group">
+                        <img :src="currLang === 'th' ? '/src/assets/flag/thailand.png' : '/src/assets/flag/unitedstate.png'"
+                            :alt="currLang" class="w-5 h-5 rounded-full object-cover border border-gray-100" />
+                    </button>
 
+                    <!-- Dropdown Menu -->
+                    <transition enter-active-class="transition duration-200 ease-out"
+                        enter-from-class="transform scale-95 opacity-0" enter-to-class="transform scale-100 opacity-100"
+                        leave-active-class="transition duration-150 ease-in"
+                        leave-from-class="transform scale-100 opacity-100"
+                        leave-to-class="transform scale-95 opacity-0">
+                        <div v-if="isLangOpen"
+                            class="absolute right-1 mt-1 w-fit bg-white border border-gray-100 rounded-sm shadow-gray-200/50 py-1.5 z-60">
+                            <a :href="getLangPath('th')"
+                                class="flex items-center space-x-3 px-2 py-2 hover:bg-gray-50 transition-colors">
+                                <img src="/src/assets/flag/thailand.png" alt="TH"
+                                    class="w-5 h-5 rounded-full object-cover border border-gray-100" />
+                            </a>
+                            <a :href="getLangPath('en')"
+                                class="flex items-center space-x-3 px-2 py-2 hover:bg-gray-50 transition-colors">
+                                <img src="/src/assets/flag/unitedstate.png" alt="EN"
+                                    class="w-5 h-5 rounded-full object-cover border border-gray-100" />
+                            </a>
+                        </div>
+                    </transition>
+                </div>
+            </div>
+
+            <div class="lg:hidden flex items-center lg:absolute lg:right-0">
                 <button @click="toggleMenu"
                     class="lg:hidden flex flex-col justify-center items-center w-6 h-6 space-y-1.5 focus:outline-none z-50">
                     <span :style="isMenuOpen ? 'transform: translateY(7px) rotate(45deg)' : ''"
@@ -133,16 +164,53 @@ onMounted(() => {
                 <div :class="{ 'tracking-normal': currLang === 'th', 'tracking-[0.2em]': currLang === 'en' }"
                     class="flex flex-col space-y-2 uppercase text-sm font-light">
                     <a v-for="(item, index) in menu" :key="index" :href="item.href" @click="isMenuOpen = false"
-                        class="text-gray-800 font-semibold hover:text-black transition-colors py-2 flex justify-between items-center group">
+                        class="text-gray-800 hover:text-black transition-colors py-2 flex justify-between items-center group">
                         {{ item.label }}
                         <span class="text-[10px] opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                     </a>
 
-                    <div class="pt-10 flex justify-center border-t border-gray-100 mt-4 space-x-6">
-                        <a :href="getLangPath('th')"
-                            :class="['text-3xl transition-opacity', currLang === 'th' ? 'opacity-100' : 'opacity-20']">🇹🇭</a>
-                        <a :href="getLangPath('en')"
-                            :class="['text-3xl transition-opacity', currLang === 'en' ? 'opacity-100' : 'opacity-20']">🇬🇧</a>
+                    <!-- Mobile Language Dropdown -->
+                    <div class="pt-8 border-t border-gray-100 mt-4">
+                        <div class="relative">
+                            <button @click="isMobileLangOpen = !isMobileLangOpen"
+                                class="w-full flex items-center justify-between transition-colors">
+                                <div class="flex items-center space-x-3">
+                                    <img :src="currLang === 'th' ? '/src/assets/flag/thailand.png' : '/src/assets/flag/unitedstate.png'"
+                                        :alt="currLang"
+                                        class="w-6 h-6 rounded-full object-cover border border-gray-200" />
+                                    <span class="text-sm  uppercase tracking-widest text-gray-700">
+                                        {{ currLang === 'th' ? 'ไทย (TH)' : 'ENGLISH (EN)' }}
+                                    </span>
+                                </div>
+                                <ChevronDown
+                                    :class="['w-4 h-4 transition-transform duration-300', isMobileLangOpen ? 'rotate-180' : '']" />
+                            </button>
+
+                            <transition enter-active-class="transition duration-200 ease-out"
+                                enter-from-class="transform -translate-y-2 opacity-0"
+                                enter-to-class="transform translate-y-0 opacity-100"
+                                leave-active-class="transition duration-150 ease-in"
+                                leave-from-class="transform translate-y-0 opacity-100"
+                                leave-to-class="transform -translate-y-2 opacity-0">
+                                <div v-if="isMobileLangOpen"
+                                    class="mt-2 bg-white rounded-xl shadow-sm border border-gray-50  overflow-hidden">
+                                    <a :href="getLangPath('th')"
+                                        class="flex items-center space-x-4 px-5 py-4 hover:bg-gray-50 transition-colors">
+                                        <img src="/src/assets/flag/thailand.png" alt="TH"
+                                            class="w-6 h-6 rounded-full object-cover border border-gray-100" />
+                                        <span :class="['text-sm tracking-wider']">ไทย
+                                            (TH)</span>
+                                    </a>
+                                    <a :href="getLangPath('en')"
+                                        class="flex items-center space-x-4 px-5 py-4 hover:bg-gray-50 transition-colors border-t border-gray-50">
+                                        <img src="/src/assets/flag/unitedstate.png" alt="EN"
+                                            class="w-6 h-6 rounded-full object-cover border border-gray-100" />
+                                        <span :class="['text-sm tracking-wider']">ENGLISH
+                                            (EN)</span>
+                                    </a>
+                                </div>
+                            </transition>
+                        </div>
                     </div>
                 </div>
             </div>
