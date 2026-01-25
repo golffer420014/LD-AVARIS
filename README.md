@@ -1,46 +1,59 @@
-# Astro Starter Kit: Basics
+# LD AVARIS - Premium Manpower Solutions
 
-```sh
-npm create astro@latest -- --template basics
-```
+A high-end, multi-language corporate website built for **LD AVARIS**, a leading manpower and recruitment agency. This project focuses on delivering a premium user experience with modern aesthetics and seamless internationalization.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Tech Stack
 
-## 🚀 Project Structure
+- **Framework**: [Astro 5](https://astro.build/) - The web framework for content-driven websites.
+- **UI Engine**: [Vue 3](https://vuejs.org/) - Powering interactive components.
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/) - Utilizing the latest Vite-based styling engine.
+- **Icons**: [Lucide Vue Next](https://lucide.dev/guide/packages/lucide-vue-next) - Clean and consistent iconography.
+- **i18n**: Custom multi-language implementation (Thai/English).
+- **Runtime**: [Bun](https://bun.sh/) - Fast all-in-one JavaScript runtime & package manager.
 
-Inside of your Astro project, you'll see the following folders and files:
+## 💡 Key Concepts
+
+### 1. Internationalization (i18n)
+The project features a robust i18n system defined in `src/i18n/`. It supports automatic routing and language switching between Thai (`th`) and English (`en`).
+
+### 2. Premium Design System
+The UI is built with a minimalist, high-end aesthetic, focusing on:
+- **Clean Typography**: Optimized for both Thai and Latin characters.
+- **Responsive Layouts**: Seamless experience across mobile and desktop.
+- **Interactive Components**: Powered by Vue islands for optimal performance.
+
+### 3. Service-Oriented Modules
+The application is modularized into several key sections:
+- **Workforces**: Showcasing available manpower categories.
+- **Clients**: Demonstrating global reach and trust.
+- **Contact**: Integrated contact details with social media connectivity.
+
+## 📁 Project Structure
 
 ```text
 /
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+├── src/
+│   ├── assets/       # Images, icons, and global styles
+│   ├── components/   # Vue & Astro components
+│   ├── i18n/         # Translation files and logic
+│   ├── layouts/      # Base page layouts
+│   └── pages/        # Astro routes and page content
+├── public/           # Static assets
+└── astro.config.mjs  # Astro configuration
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🛠️ Development
 
-## 🧞 Commands
+### Prerequisites
+- [Bun](https://bun.sh/) installed on your machine.
 
-All commands are run from the root of the project, from a terminal:
+### Commands
+| Command | Action |
+| :--- | :--- |
+| `bun install` | Install dependencies |
+| `bun run dev` | Start local development server |
+| `bun run build` | Build for production |
+| `bun run preview` | Preview production build |
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+---
+*Developed with ❤️ for LD AVARIS.*

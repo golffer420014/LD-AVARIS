@@ -20,7 +20,7 @@ const currLang = computed(() => props.lang);
         <div v-for="(country, cIndex) in countries" :key="cIndex" class="space-y-3">
             <!-- Country Header -->
             <div class="flex items-center space-x-3 border-b border-gray-100 pb-1">
-                <img :src="`/src/assets/flag/${country.flag}.png`" :alt="country.name"
+                <img :src="`/assets/flag/${country.flag}.png`" :alt="country.name"
                     class="w-8 h-auto shadow-sm border border-gray-100 rounded-sm" />
                 <h2 :class="{
                     'tracking-normal': currLang === 'th',

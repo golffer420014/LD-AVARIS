@@ -19,15 +19,15 @@ const currLang = computed(() => props.lang);
 // Social icons logic can be added here if needed, 
 // for now we'll match the design with placeholder-style circles
 const socialIcons = [
-    { name: 'facebook', img: '/src/assets/social/facebook.png', color: 'bg-neutral-500' },
-    { name: 'line', img: '/src/assets/social/line.png', color: 'bg-neutral-500' },
-    { name: 'wechat', img: '/src/assets/social/wechat.png', color: 'bg-neutral-500' },
-    { name: 'tiktok', img: '/src/assets/social/tiktok.png', color: 'bg-neutral-500' },
-    { name: 'instagram', img: '/src/assets/social/instagram.png', color: 'bg-neutral-500' },
-    { name: 'twitter', img: '/src/assets/social/x.png', color: 'bg-neutral-500' },
-    { name: 'youtube', img: '/src/assets/social/youtube.png', color: 'bg-neutral-500' },
-    { name: 'whatsapp', img: '/src/assets/social/whatsapp.png', color: 'bg-neutral-500' },
-    { name: 'email', img: '/src/assets/social/email.png', color: 'bg-neutral-500' },
+    { name: 'facebook', img: '/assets/social/facebook.png', color: 'bg-neutral-500' },
+    { name: 'line', img: '/assets/social/line.png', color: 'bg-neutral-500' },
+    { name: 'wechat', img: '/assets/social/wechat.png', color: 'bg-neutral-500' },
+    { name: 'tiktok', img: '/assets/social/tiktok.png', color: 'bg-neutral-500' },
+    { name: 'instagram', img: '/assets/social/instagram.png', color: 'bg-neutral-500' },
+    { name: 'twitter', img: '/assets/social/x.png', color: 'bg-neutral-500' },
+    { name: 'youtube', img: '/assets/social/youtube.png', color: 'bg-neutral-500' },
+    { name: 'whatsapp', img: '/assets/social/whatsapp.png', color: 'bg-neutral-500' },
+    { name: 'email', img: '/assets/social/email.png', color: 'bg-neutral-500' },
 ];
 </script>
 

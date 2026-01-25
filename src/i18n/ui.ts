@@ -1,5 +1,5 @@
-export const flagTH = '/src/assets/flag/thailand.png';
-export const flagEN = '/src/assets/flag/unitedstate.png';
+export const flagTH = '/assets/flag/thailand.png';
+export const flagEN = '/assets/flag/unitedstate.png';
 
 export const languages = {
     th: 'ไทย',
@@ -177,6 +177,46 @@ export const ui = {
         'manpower.services.item7.description': 'Coordinating the mobilization to overseas worksites.',
         'manpower.services.item8.label': 'Assurance',
         'manpower.services.item8.description': 'Maintain continuous follow-up throughout the employment process.',
+        'manpower.clients': [
+            {
+                name: "Croatia",
+                flag: "croatia",
+                sectors: [
+                    {
+                        name: "Construction & Engineering",
+                        clients: ["Agrosheep d.o.o.", "Vertiv Croatia d.o.o.", "Novi Mediji d.o.o."]
+                    }
+                ]
+            },
+            {
+                name: "Israel",
+                flag: "israel",
+                sectors: [
+                    {
+                        name: "Construction & Engineering",
+                        clients: ["Dori Construction Company"]
+                    },
+                    {
+                        name: "Hospitality & Retail",
+                        clients: ["Alexander (Restaurant Chain)", "Electra Consumer Products"]
+                    }
+                ]
+            },
+            {
+                name: "Italy",
+                flag: "italy",
+                sectors: [
+                    {
+                        name: "Construction & Engineering",
+                        clients: ["Impergilo S.p.A.", "Webuild S.p.A.", "Salini Impregilo S.p.A."]
+                    },
+                    {
+                        name: "Consultancy & Management",
+                        clients: ["Orienta S.p.A."]
+                    }
+                ]
+            }
+        ],
         'manpower.workforces': [
             {
                 name: "Construction & Engineering",

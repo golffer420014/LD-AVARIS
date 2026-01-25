@@ -21,25 +21,25 @@ const currentLang = computed(() => props.lang);
 </script>
 
 <template>
-    <div class="max-w-3xl mx-auto text-gray-800">
+    <div class="mx-auto text-gray-800">
         <h2 :class="{
             'text-[18px] md:text-[26px]': currentLang === 'th',
             'text-[18px] md:text-[26px] tracking-[0.2em] uppercase my-12 text-center': currentLang === 'en',
-        }" class="text-[18px] md:text-[26px] my-12 text-center text-black">
+        }" class="text-[18px] md:text-[26px] my-12 text-center text-black max-w-3xl mx-auto">
             {{ t("manpower.services.title") }}
         </h2>
 
         <p :class="{
             'text-[.65em] md:text-[.92em] leading-relaxed px-6': currentLang === 'th',
             'text-[.65em] md:text-[.99em] px-[10px] text-pretty': currentLang === 'en',
-        }" class="font-light mb-8 text-center  md:px-0" v-html="t('manpower.services.description')">
+        }" class="font-light mb-8 text-center  md:px-0 max-w-3xl mx-auto" v-html="t('manpower.services.description')">
         </p>
 
-        <div class="md:w-180 md:ml-14 px-4 md:px-0 mx-auto">
-            <h3 class="mb-4 text-center font-bold md:pr-[44px] -translate-y-[4px]">
+        <div class=" px-2 md:px-0 my-20">
+            <!-- <h3 class="mb-4 text-center font-bold md:pr-[44px] -translate-y-[4px]">
                 <div class="border-b-2  border-[#CADDF0] inline-block w-[100px]"
                     v-html="t('manpower.services.subtitle')"></div>
-            </h3>
+            </h3> -->
 
             <div class="grid grid-cols-2 gap-2">
                 <div v-for="i in [1, 2, 3, 4, 5, 6, 7, 8]" :key="i" class="space-y-2 space-x-2">
@@ -61,7 +61,7 @@ const currentLang = computed(() => props.lang);
             </div>
         </div>
 
-        <div class="mt-10 md:mt-22 px-4 md:px-0">
+        <div class="mt-10 md:mt-0 px-2 md:px-0">
             <PhotoGallery :images="images" />
         </div>
     </div>

@@ -34,7 +34,7 @@ const chunkedData = computed(() => {
                     <!-- Sector Header -->
                     <div class="border border-gray-300 bg-white p-3 md:p-2 text-center"
                         :class="{ 'md:border-r-0': (sIndex + 1) % 5 !== 0 && sIndex !== chunk.length - 1 }">
-                        <h3 class="tracking-wider uppercase">{{ sector.name }}</h3>
+                        <h3 class="tracking-wider">{{ sector.name }}</h3>
                     </div>
 
                     <!-- Roles List -->
