@@ -38,7 +38,7 @@ const chunkedData = computed(() => {
                     </div>
 
                     <!-- Roles List -->
-                    <div class="border border-t-0 border-gray-300 px-4 py-6 md:px-2 md:py-2 md:min-h-[100px] flex-1 bg-white"
+                    <div class="border border-t-0 border-gray-300 p-3 md:px-2 md:py-2 md:min-h-[100px] flex-1 bg-white"
                         :class="{ 'md:border-r-0': (sIndex + 1) % 5 !== 0 && sIndex !== chunk.length - 1 }">
                         <ul class="grid grid-cols-2 md:grid-cols-1">
                             <li v-for="(role, rIndex) in sector.roles" :key="rIndex"
