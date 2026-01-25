@@ -115,12 +115,12 @@ onMounted(() => {
                         <div v-if="isLangOpen"
                             class="absolute right-1 mt-1 w-fit bg-white border border-gray-100 rounded-sm shadow-gray-200/50 py-1.5 z-60">
                             <a :href="getLangPath('th')"
-                                class="flex items-center space-x-3 px-2 py-2 hover:bg-gray-50 transition-colors">
+                                class="flex items-center space-x-3 px-2 py-2 transition-colors">
                                 <img src="/src/assets/flag/thailand.png" alt="TH"
                                     class="w-5 h-5 rounded-full object-cover border border-gray-100" />
                             </a>
                             <a :href="getLangPath('en')"
-                                class="flex items-center space-x-3 px-2 py-2 hover:bg-gray-50 transition-colors">
+                                class="flex items-center space-x-3 px-2 py-2 transition-colors">
                                 <img src="/src/assets/flag/unitedstate.png" alt="EN"
                                     class="w-5 h-5 rounded-full object-cover border border-gray-100" />
                             </a>
@@ -195,14 +195,14 @@ onMounted(() => {
                                 <div v-if="isMobileLangOpen"
                                     class="mt-2 bg-white rounded-xl shadow-sm border border-gray-50  overflow-hidden">
                                     <a :href="getLangPath('th')"
-                                        class="flex items-center space-x-4 px-5 py-4 hover:bg-gray-50 transition-colors">
+                                        class="flex items-center space-x-4 px-5 py-4 transition-colors">
                                         <img src="/src/assets/flag/thailand.png" alt="TH"
                                             class="w-6 h-6 rounded-full object-cover border border-gray-100" />
                                         <span :class="['text-sm tracking-wider']">ไทย
                                             (TH)</span>
                                     </a>
                                     <a :href="getLangPath('en')"
-                                        class="flex items-center space-x-4 px-5 py-4 hover:bg-gray-50 transition-colors border-t border-gray-50">
+                                        class="flex items-center space-x-4 px-5 py-4 transition-colors border-t border-gray-50">
                                         <img src="/src/assets/flag/unitedstate.png" alt="EN"
                                             class="w-6 h-6 rounded-full object-cover border border-gray-100" />
                                         <span :class="['text-sm tracking-wider']">ENGLISH
