@@ -21,22 +21,22 @@ const currentLang = computed(() => props.lang);
 </script>
 
 <template>
-    <div class="mx-auto text-gray-800">
+    <div class="mx-auto text-gray-800 space-y-12 py-12">
         <h2 :class="{
             'text-[18px] md:text-[26px]': currentLang === 'th',
-            'text-[18px] md:text-[26px] tracking-[0.2em] uppercase my-12 text-center': currentLang === 'en',
-        }" class="text-[18px] md:text-[26px] my-12 text-center text-black max-w-3xl mx-auto">
+            'text-[18px] md:text-[26px] tracking-[0.2em] uppercase text-center': currentLang === 'en',
+        }" class="text-[18px] md:text-[26px] text-center text-black max-w-3xl mx-auto">
             {{ t("manpower.services.title") }}
         </h2>
 
         <p :class="{
-            'text-[.65em] md:text-[.92em] leading-relaxed px-6': currentLang === 'th',
-            'text-[.65em] md:text-[.99em] px-[10px] text-pretty': currentLang === 'en',
-        }" class="font-light mb-8 text-center  md:px-0 max-w-3xl mx-auto" v-html="t('manpower.services.description')">
+            'text-[.65em] md:text-[1em] leading-relaxed px-6': currentLang === 'th',
+            'text-[.65em] md:text-[1em] px-[10px] text-pretty': currentLang === 'en',
+        }" class="font-light text-center  md:px-0 max-w-3xl mx-auto" v-html="t('manpower.services.description')">
         </p>
 
-        <div class=" px-2 md:px-0 my-20">
-            <!-- <h3 class="mb-4 text-center font-bold md:pr-[44px] -translate-y-[4px]">
+        <div class=" px-2 md:px-0">
+            <!-- <h3 class="text-center font-bold md:pr-[44px] -translate-y-[4px]">
                 <div class="border-b-2  border-[#CADDF0] inline-block w-[100px]"
                     v-html="t('manpower.services.subtitle')"></div>
             </h3> -->
@@ -44,7 +44,7 @@ const currentLang = computed(() => props.lang);
             <div class="grid grid-cols-2 gap-2">
                 <div v-for="i in [1, 2, 3, 4, 5, 6, 7, 8]" :key="i" class="space-y-2 space-x-2">
                     <div :class="{
-                        'md:min-w-[200px] text-[.6em] md:text-[.8em]': currentLang === 'th',
+                        'md:min-w-[200px] text-[.6em] md:text-[.9em]': currentLang === 'th',
                         'md:min-w-[120px] text-[.6em] md:text-[.9em]': currentLang === 'en',
                     }" class="bg-card  p-2 h-full rounded-md shadow-sm">
                         <div :class="{
@@ -61,7 +61,7 @@ const currentLang = computed(() => props.lang);
             </div>
         </div>
 
-        <div class="mt-10 md:mt-0 px-2 md:px-0">
+        <div class="px-2 md:px-0">
             <PhotoGallery :images="images" />
         </div>
     </div>

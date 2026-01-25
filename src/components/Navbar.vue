@@ -84,11 +84,8 @@ onMounted(() => {
             </a>
 
             <!-- Desktop Navigation Links -->
-            <div :class="{
-                'space-x-[8px]': currLang === 'th',
-                'space-x-[18px]': currLang === 'en',
-            }"
-                class="hidden lg:flex items-center text-xs text-gray-800 uppercase absolute left-1/2 -translate-x-1/2 mt-0.5">
+            <div
+                class="hidden lg:flex items-center text-xs w-[832px] justify-between text-gray-800 uppercase absolute left-1/2 -translate-x-1/2 mt-0.5">
                 <template v-for="(item, index) in menu" :key="index">
                     <a :href="item.href" class="hover:text-black transition-colors">
                         {{ item.label }}

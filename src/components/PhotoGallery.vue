@@ -31,7 +31,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <div :id="galleryId" class="grid grid-cols-3 gap-4 my-12">
+    <div :id="galleryId" class="grid grid-cols-3 gap-2">
         <a v-for="(image, index) in images" :key="index" :href="image.src" :data-pswp-width="image.width"
             :data-pswp-height="image.height" target="_blank" rel="noreferrer"
             class="aspect-square overflow-hidden group relative bg-gray-100">

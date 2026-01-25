@@ -267,6 +267,6 @@ export const ui = {
             tel: '(+66) 088-686-6880',
             email: 'contact@avaris.co.th'
         },
-        'footer.rights': '@ {year} Avaris International Manpower Co., Ltd. All Rights Reserved is a wholly owned subsidiary of Avaris Group Co., Ltd., legally operating under the same parent company.',
+        'footer.rights': '@ {year} Avaris International Manpower Co., Ltd. All rights reserved. Subsidiary of Avaris Group Co., Ltd.',
     },
 } as const;
