@@ -129,6 +129,14 @@ export const ui = {
                 roles: ["ที่ปรึกษาด้านวิชาการ", "ผู้ช่วยที่ปรึกษา", "นักวางกลยุทธ์ธุรกิจ", "โค้ชแนะแนวอาชีพ", "ผู้เชี่ยวชาญด้านการบริหารการเปลี่ยนแปลง", "วิทยากรฝึกอบรมองค์กร", "ผู้อำนวยการฝ่ายสร้างสรรค์", "ที่ปรึกษาด้านความมั่นคงปลอดภัยไซเบอร์", "ผู้นำด้านการเปลี่ยนผ่านสู่ดิจิทัล", "นักวิจัยเศรษฐกิจ", "ที่ปรึกษาด้านการศึกษา", "ผู้เชี่ยวชาญด้านการเพิ่มประสิทธิภาพ", "ผู้จัดการด้านการมีส่วนร่วมลูกค้า", "ที่ปรึกษาด้านสิ่งแวดล้อม", "โค้ชผู้บริหาร", "นักบัญชีนิติเวช", "ที่ปรึกษาด้านโซลูชันเทคโนโลยีสารสนเทศ", "ที่ปรึกษากฎหมาย", "ที่ปรึกษาด้านการจัดการ", "นักวิเคราะห์วิจัยตลาด", "ที่ปรึกษาด้านการดำเนินงาน", "นักจิตวิทยาองค์กร", "ที่ปรึกษาหลัก", "ผู้เชี่ยวชาญด้านการบริหารโครงการ (PMP)", "ผู้เชี่ยวชาญด้านประชาสัมพันธ์", "ที่ปรึกษาด้านการบริหารความเสี่ยง", "ที่ปรึกษาระดับอาวุโส", "นักวางกลยุทธ์สื่อสังคมออนไลน์", "ผู้นำด้านกลยุทธ์", "ที่ปรึกษาด้านเทคนิค"]
             }
         ],
+        'manpower.contact': {
+            company: 'บริษัทจัดหางาน อวาริส อินเตอร์เนชั่นแนล จำกัด',
+            address: '10/89 ชั้น 6 อาคาร เดอะ เทรนดี้ ออฟฟิศ, ซอยสุขุมวิท 13 ถนนสุขุมวิท, แขวงคลองเตยเหนือ, เขตวัฒนา, กรุงเทพฯ 10110',
+            taxId: '0105565177544',
+            license: 'Tor.101/2569',
+            tel: '(+66) 088-686-6880',
+            email: 'contact@avaris.co.th'
+        },
         'footer.rights': '© {year} บริษัทจัดหางาน อวาริส อินเตอร์เนชั่นแนล จํากัด สงวนลิขสิทธิ์ทั้งหมด เป็นบริษัทย่อยที่บริษัท อวาริส กรุ๊ป จํากัด ถือหุ้นทั้งหมด และดําเนินการภายใต้โครงสร้างการถือหุ้นและการกํากับดูแลของบริษัทแม่เดียวกัน',
     },
     en: {
@@ -211,6 +219,14 @@ export const ui = {
                 roles: ["Academic Consultant", "Associate Consultant", "Business Strategist", "Career Coach", "Change Management Specialist", "Corporate Trainer", "Creative Director", "Cybersecurity Consultant", "Digital Transformation Leader", "Economic Researcher", "Education Consultant", "Efficiency Expert", "Engagement Manager", "Environmental Consultant", "Executive Coach", "Forensic Accountant", "IT Solution Consultant", "Legal Consultant", "Management Consultant", "Market Research Analyst", "Operations Consultant", "Organizational Psychologist", "Principal Consultant", "Project Management Professional (PMP)", "Public Relations Specialist", "Risk Management Consultant", "Senior Consultant", "Social Media Strategist", "Strategy Lead", "Technical Consultant"]
             }
         ],
+        'manpower.contact': {
+            company: 'Avaris International Manpower Co., Ltd.',
+            address: '10/89 - Floor 6, The Trendy Office Building, Soi Sukhumvit 13, Sukhumvit Rd., Khlong Toei Nuea Subdistrict, Watthana District, Bangkok 10110',
+            taxId: '0105565177544',
+            license: 'Tor.101/2569',
+            tel: '(+66) 088-686-6880',
+            email: 'contact@avaris.co.th'
+        },
         'footer.rights': '@ {year} Avaris International Manpower Co., Ltd. All Rights Reserved is a wholly owned subsidiary of Avaris Group Co., Ltd., legally operating under the same parent company.',
     },
 } as const;

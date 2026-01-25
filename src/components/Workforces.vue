@@ -43,7 +43,8 @@ const chunkedData = computed(() => {
                         <ul class="grid grid-cols-2 md:grid-cols-1">
                             <li v-for="(role, rIndex) in sector.roles" :key="rIndex"
                                 class="flex items-start space-x-1 font-light">
-                                <span class="mt-2 md:mt-1 w-1 h-1 rounded-full bg-black shrink-0"></span>
+                                <span
+                                    class="mt-1.5 md:mt-1 md:w-0.5 md:h-0.5 w-1 h-1 rounded-full bg-black shrink-0"></span>
                                 <span>{{ role }}</span>
                             </li>
                         </ul>

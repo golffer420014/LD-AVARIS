@@ -2,7 +2,9 @@
 import Layout from "@/layouts/Layout.astro";
 import TabsOriginal from "@/components/TabsOriginal.vue";
 import ClientsTab from "@/components/ClientsTab.vue";
+import ContactTab from "@/components/ContactTab.vue";
 import ServicesTab from "@/components/ServicesTab.vue";
+import { ui, defaultLang } from "@/i18n/ui";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
@@ -11,6 +13,7 @@ const t = useTranslations(lang);
 // Client Data
 const clientData = t("manpower.clients" as any);
 const workforceData = t("manpower.workforces" as any);
+const contactData = t("manpower.contact" as any);
 
 // Gallery Images
 import img1 from "@/assets/img/1.jpg";
@@ -71,6 +74,9 @@ const demoTabs = [
       </div>
       <div slot="tab-2">
         <ClientsTab lang={lang} countries={clientData} client:load />
+      </div>
+      <div slot="tab-3">
+        <ContactTab lang={lang} data={contactData} client:load />
       </div>
     </TabsOriginal>
   </div>

@@ -44,7 +44,8 @@ const currLang = computed(() => props.lang);
                             <li v-for="(client, clIndex) in sector.clients" :key="clIndex"
                                 class="flex items-start space-x-1 font-light"
                                 :class="{ 'col-span-2': sector.clients.length === 1 }">
-                                <span class="mt-2 md:mt-1 w-1 h-1 rounded-full bg-black shrink-0"></span>
+                                <span
+                                    class="mt-1.5 md:mt-1 md:w-0.5 md:h-0.5 w-1 h-1 rounded-full bg-black shrink-0"></span>
                                 <span>{{ client }}</span>
                             </li>
                         </ul>
