@@ -29,7 +29,7 @@ const chunkedData = computed(() => {
     <div class="space-y-12 py-8 px-6 md:px-0 md:pt-14">
         <!-- Workforce Sets -->
         <div v-for="(chunk, cIndex) in chunkedData" :key="cIndex" class="space-y-3">
-            <div class="grid grid-cols-1 md:grid-cols-5 text-xs md:text-[8px] gap-4 md:gap-0">
+            <div class="grid grid-cols-1 md:grid-cols-5 text-xs md:text-[10px] gap-4 md:gap-0">
                 <div v-for="(sector, sIndex) in chunk" :key="sIndex" class="flex flex-col">
                     <!-- Sector Header -->
                     <div class="border border-gray-300 bg-white p-3 md:p-2 text-center"
