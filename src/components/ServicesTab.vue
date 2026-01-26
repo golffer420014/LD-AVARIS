@@ -46,7 +46,7 @@ const currentLang = computed(() => props.lang);
                     <div :class="{
                         'md:min-w-[200px] text-[.6em] md:text-[.9em]': currentLang === 'th',
                         'md:min-w-[120px] text-[.6em] md:text-[.9em]': currentLang === 'en',
-                    }" class="bg-card  p-2 h-full rounded-md shadow-sm">
+                    }" class="bg-card  p-2 h-full min-h-[70px] md:min-h-[80px] rounded-md shadow-sm">
                         <div :class="{
                             '': currentLang === 'th',
                             '': currentLang === 'en',
