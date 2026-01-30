@@ -30,6 +30,7 @@ const isSubmitting = ref(false);
 const isSuccess = ref(false);
 
 const handleSubmit = async () => {
+    return;
     if (isSubmitting.value) return;
 
     isSubmitting.value = true;
