@@ -2,9 +2,10 @@
 import "../styles/global.css";
 import Navbar from "../components/Navbar.vue";
 import Footer from "../components/Footer.astro";
-import { getLangFromUrl } from "../i18n/utils";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 const currentPath = Astro.url.pathname;
 ---
 
@@ -17,7 +18,8 @@ const currentPath = Astro.url.pathname;
     <meta name="generator" content={Astro.generator} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <title>Astro Basics</title>
+    <title>{t("site.title")}</title>
+    <meta name="description" content={t("site.description")} />
   </head>
   <body class="h-screen overflow-hidden bg-base">
     <div class="h-full overflow-y-scroll overflow-x-hidden relative">

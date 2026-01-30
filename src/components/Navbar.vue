@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue';
-import { ui, defaultLang } from '@/i18n/ui';
+import { ui, defaultLang, flagTH, flagEN } from '@/i18n/ui';
 import { getLocalizedPath } from '@/i18n/utils';
 import { X, ChevronDown } from 'lucide-vue-next';
 
@@ -100,8 +100,8 @@ onMounted(() => {
                 <div class="relative lang-dropdown">
                     <button @click="isLangOpen = !isLangOpen"
                         class="flex items-center space-x-2.5 px-3 py-1.5 transition-colors group">
-                        <img :src="currLang === 'th' ? '/assets/flag/thailand.png' : '/assets/flag/unitedstate.png'"
-                            :alt="currLang" class="w-10 rounded-sm  border border-gray-100 shadow-sm" />
+                        <img :src="currLang === 'th' ? flagTH : flagEN" :alt="currLang"
+                            class="w-10 rounded-sm  border border-gray-100 shadow-sm" />
                     </button>
 
                     <!-- Dropdown Menu -->
@@ -114,13 +114,11 @@ onMounted(() => {
                             class="absolute right-1 mt-1 w-fit bg-white border border-gray-100 rounded-sm shadow-gray-200/50 py-1.5 z-60">
                             <a :href="getLangPath('th')"
                                 class="flex items-center space-x-3 px-2 py-2 transition-colors">
-                                <img src="/assets/flag/thailand.png" alt="TH"
-                                    class="w-10 rounded-sm  border border-gray-100" />
+                                <img :src="flagTH" alt="TH" class="w-10 rounded-sm  border border-gray-100" />
                             </a>
                             <a :href="getLangPath('en')"
                                 class="flex items-center space-x-3 px-2 py-2 transition-colors">
-                                <img src="/assets/flag/unitedstate.png" alt="EN"
-                                    class="w-10 rounded-sm  border border-gray-100" />
+                                <img :src="flagEN" alt="EN" class="w-10 rounded-sm  border border-gray-100" />
                             </a>
                         </div>
                     </transition>
@@ -173,10 +171,10 @@ onMounted(() => {
                             <button @click="isMobileLangOpen = !isMobileLangOpen"
                                 class="w-full flex items-center justify-between transition-colors">
                                 <div class="flex items-center space-x-3">
-                                    <img :src="currLang === 'th' ? '/assets/flag/thailand.png' : '/assets/flag/unitedstate.png'"
-                                        :alt="currLang" class="w-8 h-6 rounded-sm  border border-gray-200 shadow-sm" />
+                                    <img :src="currLang === 'th' ? flagTH : flagEN" :alt="currLang"
+                                        class="w-8 h-6 rounded-sm  border border-gray-200 shadow-sm" />
                                     <span class="text-sm  uppercase tracking-widest text-gray-700">
-                                        {{ currLang === 'th' ? 'ไทย (TH)' : 'ENGLISH (EN)' }}
+                                        {{ currLang === 'th' ? t('lang.th') : t('lang.en') }}
                                     </span>
                                 </div>
                                 <ChevronDown
@@ -193,17 +191,15 @@ onMounted(() => {
                                     class="mt-2 bg-white rounded-xl shadow-sm border border-gray-50  overflow-hidden">
                                     <a :href="getLangPath('th')"
                                         class="flex items-center space-x-4 px-5 py-4 transition-colors">
-                                        <img src="/assets/flag/thailand.png" alt="TH"
+                                        <img :src="flagTH" alt="TH"
                                             class="w-8 h-6 rounded-sm  border border-gray-100" />
-                                        <span :class="['text-sm tracking-wider']">ไทย
-                                            (TH)</span>
+                                        <span :class="['text-sm tracking-wider']">{{ t('lang.th') }}</span>
                                     </a>
                                     <a :href="getLangPath('en')"
                                         class="flex items-center space-x-4 px-5 py-4 transition-colors border-t border-gray-50">
-                                        <img src="/assets/flag/unitedstate.png" alt="EN"
+                                        <img :src="flagEN" alt="EN"
                                             class="w-8 h-6 rounded-sm  border border-gray-100" />
-                                        <span :class="['text-sm tracking-wider']">ENGLISH
-                                            (EN)</span>
+                                        <span :class="['text-sm tracking-wider']">{{ t('lang.en') }}</span>
                                     </a>
                                 </div>
                             </transition>
