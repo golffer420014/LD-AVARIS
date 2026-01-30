@@ -99,15 +99,15 @@ const followIcons = [
 </script>
 
 <template>
-    <div class="py-4 md:py-12 max-w-7xl mx-auto px-4 md:px-8 text-gray-800">
+    <div class="py-4 md:py-12">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
             <!-- Left Side: Form & Map -->
             <div class="space-y-12">
                 <!-- Enquiry Form -->
                 <div>
-                    <h2 class="text-lg md:text-xl font-serif mb-2 md:mb-6 text-left">
+                    <div class="text-xs md:text-xl font-serif mb-2 md:mb-6 text-left">
                         {{ t('contact.form.title') }}
-                    </h2>
+                    </div>
                     <form class="space-y-4" @submit.prevent="handleSubmit">
                         <input v-model="form.name" type="text" :placeholder="t('contact.form.name')" required
                             :disabled="isSubmitting"
