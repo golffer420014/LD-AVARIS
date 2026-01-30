@@ -102,7 +102,7 @@ const followIcons = [
     <div class="py-4 md:py-12">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
             <!-- Left Side: Form & Map -->
-            <div class="space-y-12">
+            <div class="space-y-10 py-0 lg:py-4">
                 <!-- Enquiry Form -->
                 <div>
                     <div class="text-xs md:text-xl font-serif mb-2 md:mb-6 text-left">
@@ -212,7 +212,7 @@ const followIcons = [
                                     class="w-full h-full object-contain invert grayscale" alt="" />
                             </div>
                             <a :href="`mailto:${data.email}`" class="text-sm md:text-base hover:underline">{{ data.email
-                            }}</a>
+                                }}</a>
                         </div>
                     </div>
                 </div>
