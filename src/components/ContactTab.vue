@@ -32,7 +32,7 @@ const socialIcons = [
 </script>
 
 <template>
-    <div class="py-16 md:py-24 max-w-4xl mx-auto px-6 text-center text-gray-800">
+    <div class="py-16 md:py-24 container mx-auto px-6 text-center text-gray-800">
         <!-- Company Name -->
         <h2 class="text-lg md:text-2xl font-bold mb-8 md:mb-12 tracking-wide">
             {{ data.company }}

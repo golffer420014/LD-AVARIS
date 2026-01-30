@@ -239,15 +239,15 @@ export const ui = {
                 roles: ["Accommodation Officer", "Baker", "Barista", "Bartender", "Bell Attendant", "Bellboy", "Catering Staff", "Chef", "Concierge", "Doorman", "Food & Beverage Attendant", "Front Office Manager", "Guest Relations Officer", "Head Housekeeper", "Host / Hostess", "Hotel General Manager", "Housekeeper", "Kitchen Staff", "Laundry Attendant", "Massage Therapist", "Pastry Chef", "Reservation Officer", "Restaurant Manager", "Room Attendant", "Service Staff", "Spa Therapist", "Steward", "Tour Guide", "Travel Consultant", "Waiter / Waitress"]
             },
             {
-                name: "Science & Technology",
+                name: "Science & Technologyies",
                 roles: ["AI Engineer", "Automation Engineer", "Biomedical Engineer", "Chemical Engineer", "Civil Engineer", "Computer Scientist", "Cybersecurity Analyst", "Data Analyst", "Data Scientist", "DevOps Engineer", "Electrical Engineer", "Electronics Engineer", "Environmental Scientist", "IT Specialist", "Materials Scientist", "Mechanical Engineer", "Mechatronics Engineer", "Network Engineer", "QA Engineer", "Robotics Engineer", "Software Developer", "Software Engineer", "System Engineer", "Telecommunications Engineer", "Test Engineer", "UI/UX Designer", "Web Developer", "Scientific Researcher", "Technology Consultant", "Systems Analyst"]
             },
             {
-                name: "Medical & Health Services",
+                name: "Medical & Healthcare",
                 roles: ["Anesthesiologist", "Dietitian", "Emergency Medical Technician", "General Practitioner", "Health Informatics Technician", "Hospital Administrator", "Infection Control Officer", "Medical Laboratory Technologist", "Medical Doctor", "Medical Records Technician", "Specialist Doctor", "Mental Health Counselor", "Midwife", "Nurse Assistant", "Nutritionist", "Occupational Therapist", "Paramedic", "Pharmacist", "Pharmacy Technician", "Physician", "Phlebotomist", "Physiotherapist", "Registered Nurse", "Psychiatrist", "Psychologist", "Radiologic Technologist", "Radiologist", "Staff Nurse", "Respiratory Therapist", "Surgeon"]
             },
             {
-                name: "Education & Social Development",
+                name: "Education & Training",
                 roles: ["Academic Advisor", "Admissions Officer", "After-school Program Coordinator", "Dormitory Manager", "Career Coach", "Corporate Trainer", "Cultural Exchange Program Officer", "Curriculum Developer", "Early Childhood Educator", "Education Consultant", "Educational Psychologist", "English Language Teacher (ESL)", "First Aid Instructor", "Head of Department", "Hospitality Trainer", "Instructional Designer", "Learning Support Assistant", "Librarian", "Life Skills Coach", "Muay Thai Instructor", "Online Course Moderator", "Primary School Teacher", "Private Tutor", "School Administrator", "School Director", "Secondary School Teacher", "Special Education Teacher", "Teaching Assistant", "University Lecturer", "Vocational Instructor"]
             },
             {
@@ -255,7 +255,7 @@ export const ui = {
                 roles: ["Accountant", "Accounts Payable Specialist", "Accounts Receivable Clerk", "Auditor", "Bank Teller", "Billing Coordinator", "Budget Analyst", "Business Development Manager", "Chief Financial Officer (CFO)", "Claims Adjuster", "Commercial Loan Officer", "Compliance Manager", "Credit Analyst", "Customer Service Representative", "Data Entry Clerk", "Financial Controller", "Financial Planner", "HR Manager", "Insurance Underwriter", "Investment Analyst", "Loan Processing Officer", "Marketing Coordinator", "Office Manager", "Payroll Specialist", "Purchasing Officer", "Receptionist", "Sales Representative", "Tax Manager", "Treasury Manager", "Wealth Management Advisor"]
             },
             {
-                name: "Consulting & Management",
+                name: "Consultancy & Management",
                 roles: ["Academic Consultant", "Associate Consultant", "Business Strategist", "Career Coach", "Change Management Specialist", "Corporate Trainer", "Creative Director", "Cybersecurity Consultant", "Digital Transformation Leader", "Economic Researcher", "Education Consultant", "Efficiency Expert", "Engagement Manager", "Environmental Consultant", "Executive Coach", "Forensic Accountant", "IT Solution Consultant", "Legal Consultant", "Management Consultant", "Market Research Analyst", "Operations Consultant", "Organizational Psychologist", "Principal Consultant", "Project Management Professional (PMP)", "Public Relations Specialist", "Risk Management Consultant", "Senior Consultant", "Social Media Strategist", "Strategy Lead", "Technical Consultant"]
             }
         ],

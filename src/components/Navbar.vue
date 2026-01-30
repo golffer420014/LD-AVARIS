@@ -77,16 +77,16 @@ onMounted(() => {
 <template>
     <nav class="h-[50px] bg-white sticky top-0 z-50">
         <div
-            class="flex items-center justify-between h-full max-w-6xl mx-auto px-4 lg:px-0 relative border-b border-gray-100">
+            class="flex items-center justify-between h-full container mx-auto px-4 lg:px-0 relative border-b border-gray-100">
             <!-- Logo -->
             <a :href="getLocalizedPath('/', props.lang)"
-                class="text-[1.5em] lg:text-[1.7em] mt-1 lg:mt-2 font-normal tracking-[0.4em] text-black lg:absolute lg:-left-12">
+                class="text-[1.5em] lg:text-[1.7em] mt-1 lg:mt-2 font-normal tracking-[0.4em] text-black">
                 AVARIS
             </a>
 
             <!-- Desktop Navigation Links -->
             <div
-                class="hidden lg:flex items-center text-xs w-[832px] justify-between text-gray-800 uppercase absolute left-1/2 -translate-x-1/2 mt-0.5">
+                class="hidden lg:flex items-center text-sm w-[832px] justify-between text-gray-800 uppercase absolute left-1/2 -translate-x-1/2 mt-0.5">
                 <template v-for="(item, index) in menu" :key="index">
                     <a :href="item.href" class="hover:text-black transition-colors">
                         {{ item.label }}

@@ -23,16 +23,16 @@ const currentLang = computed(() => props.lang);
 <template>
     <div class="mx-auto text-gray-800 space-y-12 py-12">
         <h2 :class="{
-            'text-[18px] md:text-[26px]': currentLang === 'th',
-            'text-[18px] md:text-[26px] tracking-[0.2em] uppercase text-center': currentLang === 'en',
-        }" class="text-[18px] md:text-[26px] text-center text-black max-w-3xl mx-auto">
+            'text-[18px] md:text-[30px]': currentLang === 'th',
+            'text-[18px] md:text-[30px] tracking-[0.2em] uppercase text-center': currentLang === 'en',
+        }" class="text-center text-black max-w-3xl mx-auto">
             {{ t("manpower.services.title") }}
         </h2>
 
         <p :class="{
-            'text-[.65em] md:text-[1em] leading-relaxed px-6': currentLang === 'th',
-            'text-[.65em] md:text-[1em] px-[10px] text-pretty': currentLang === 'en',
-        }" class="font-light text-center  md:px-0 max-w-3xl mx-auto" v-html="t('manpower.services.description')">
+            'text-[.65em] md:text-[1.2em] leading-relaxed': currentLang === 'th',
+            'text-[.65em] md:text-[1.2em] text-pretty': currentLang === 'en',
+        }" class="font-light text-center px-10  md:px-0 max-w-5xl mx-auto" v-html="t('manpower.services.description')">
         </p>
 
         <div class=" px-2 md:px-0">
@@ -46,7 +46,7 @@ const currentLang = computed(() => props.lang);
                     <div :class="{
                         'md:min-w-[200px] text-[.6em] md:text-[.9em]': currentLang === 'th',
                         'md:min-w-[120px] text-[.6em] md:text-[.9em]': currentLang === 'en',
-                    }" class="bg-card  p-2 h-full min-h-[70px] md:min-h-[80px] rounded-md shadow-sm">
+                    }" class="bg-card  p-2 h-full min-h-[70px] md:min-h-[60px] rounded-md shadow-sm">
                         <div :class="{
                             '': currentLang === 'th',
                             '': currentLang === 'en',

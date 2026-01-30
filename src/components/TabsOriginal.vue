@@ -36,7 +36,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="tabs-container w-full max-w-216 mx-auto md:px-4">
+    <div class="tabs-container w-full max-w-290 mx-auto md:px-4">
         <!-- Tab Buttons -->
         <div class="bg-card  outline-1 outline-gray-200">
             <div class="grid grid-cols-4 items-center ">
@@ -46,7 +46,7 @@ onMounted(() => {
                     <span class="relative pb-[3px] inline-block">
                         {{ tab.label }}
                         <span :class="[
-                            'absolute bottom-0 -left-[20%] w-[140%] h-[1px] bg-black transition-transform duration-300 origin-left',
+                            'absolute bottom-0 -left-[30%] w-[160%] h-px bg-black transition-transform duration-300 origin-left',
                             activeTabSlug === tab.slug ? 'scale-x-100' : 'scale-x-0'
                         ]"></span>
                     </span>
