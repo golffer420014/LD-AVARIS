@@ -30,7 +30,6 @@ const isSubmitting = ref(false);
 const isSuccess = ref(false);
 
 const handleSubmit = async () => {
-    return;
     if (isSubmitting.value) return;
 
     isSubmitting.value = true;
@@ -46,7 +45,6 @@ const handleSubmit = async () => {
             body: JSON.stringify({
                 access_key: "11a2553f-f7f2-4ee3-aee0-50d030d29032",
                 name: form.name,
-                organization: form.org,
                 phone: form.phone,
                 email: form.email,
                 message: form.message,
@@ -82,62 +80,61 @@ const handleSubmit = async () => {
 
 
 // Icons grouping for the new design
-const messageIcons = [
-    { name: 'line', img: '/assets/contact/line.png' },
-    { name: 'whatsapp', img: '/assets/contact/whatsapp.png' },
+const contactIcons = [
+    { name: 'phone', img: '/assets/contact/phone.png', link: 'tel:+66886866880' },
+    { name: 'line', img: '/assets/contact/line.png', link: 'https://lin.ee/c97zL5' },
+    { name: 'whatsapp', img: '/assets/contact/whatsapp.png', link: 'https://wa.me/message/L76U6AEG7OR7P1' },
+    { name: 'wechat', img: '/assets/contact/wechat.png', link: '', noInvert: true },
+    { name: 'mail', img: '/assets/contact/mail.png', link: 'mailto:contact@avaris.co.th' },
 ];
 
 const followIcons = [
-    { name: 'facebook', img: '/assets/contact/facebook.png' },
-    { name: 'instagram', img: '/assets/contact/instagram.png' },
-    { name: 'youtube', img: '/assets/contact/youtube.png' },
-    { name: 'tiktok', img: '/assets/contact/tiktok.png' },
-    { name: 'x', img: '/assets/contact/x.png' },
-    { name: 'add', img: '/assets/contact/add.png' },
-    { name: 'linkedin', img: '/assets/contact/linkedin.png' },
-    { name: 'pinterest', img: '/assets/contact/pinterest.png' },
+    { name: 'facebook', img: '/assets/contact/facebook.png', link: 'https://www.facebook.com/AvarisManpower' },
+    { name: 'instagram', img: '/assets/contact/instagram.png', link: 'https://www.instagram.com/avarismanpower' },
+    { name: 'youtube', img: '/assets/contact/youtube.png', link: 'https://www.youtube.com/@AvarisManpower' },
+    { name: 'tiktok', img: '/assets/contact/tiktok.png', link: 'https://www.tiktok.com/@avarismanpower' },
+    { name: 'x', img: '/assets/contact/x.png', link: 'https://x.com/AvarisManpower' },
+    { name: 'threads', img: '/assets/contact/add.png', link: 'https://www.threads.com/@avarismanpower' },
+    { name: 'linkedin', img: '/assets/contact/linkedin.png', link: '' },
+    { name: 'pinterest', img: '/assets/contact/pinterest.png', link: '' },
 ];
 </script>
 
 <template>
-    <div class="py-4 md:py-12">
+    <div class="space-y-8 py-8 px-6 md:px-0 md:pt-14">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
             <!-- Left Side: Form & Map -->
             <div class="space-y-10 py-0 lg:py-4">
                 <!-- Enquiry Form -->
                 <div>
-                    <div class="text-xs md:text-xl font-serif mb-2 md:mb-6 text-left">
+                    <div class="text-sm md:text-xl text-center font-serif mb-2 md:mb-6 md:text-left">
                         {{ t('contact.form.title') }}
                     </div>
                     <form class="space-y-4" @submit.prevent="handleSubmit">
                         <input v-model="form.name" type="text" :placeholder="t('contact.form.name')" required
                             :disabled="isSubmitting"
-                            class="w-full p-3 border border-gray-200 focus:outline-none focus:border-black transition-colors placeholder:text-gray-300 disabled:bg-gray-50" />
-                        <input v-model="form.org" type="text" :placeholder="t('contact.form.org')"
-                            :disabled="isSubmitting"
-                            class="w-full p-3 border border-gray-200 focus:outline-none focus:border-black transition-colors placeholder:text-gray-300 disabled:bg-gray-50" />
+                            class="w-full p-1 border border-gray-200 focus:outline-none focus:border-black transition-colors placeholder:text-gray-300 disabled:bg-gray-50" />
 
                         <div class="flex gap-2">
-                            <div
-                                class="flex items-center justify-center p-3 border border-gray-200 bg-white min-w-[60px]">
+                            <div class="flex items-center justify-center p-1 px-2 border border-gray-200 bg-white">
                                 <img :src="flagEN" alt="US" class="w-6 h-4 object-cover" />
                             </div>
                             <input v-model="form.phone" type="tel" :placeholder="t('contact.form.phone')" required
                                 :disabled="isSubmitting"
-                                class="flex-1 p-3 border border-gray-200 focus:outline-none focus:border-black transition-colors placeholder:text-gray-300 disabled:bg-gray-50" />
+                                class="flex-1 p-1 border border-gray-200 focus:outline-none focus:border-black transition-colors placeholder:text-gray-300 disabled:bg-gray-50" />
                         </div>
 
                         <input v-model="form.email" type="email" :placeholder="t('contact.form.email')" required
                             :disabled="isSubmitting"
-                            class="w-full p-3 border border-gray-200 focus:outline-none focus:border-black transition-colors placeholder:text-gray-300 disabled:bg-gray-50" />
+                            class="w-full p-1 border border-gray-200 focus:outline-none focus:border-black transition-colors placeholder:text-gray-300 disabled:bg-gray-50" />
 
-                        <textarea v-model="form.message" :placeholder="t('contact.form.message')" rows="8" required
+                        <textarea v-model="form.message" :placeholder="t('contact.form.message')" rows="3" required
                             :disabled="isSubmitting"
-                            class="w-full p-3 border border-gray-200 focus:outline-none focus:border-black transition-colors resize-none placeholder:text-gray-300 disabled:bg-gray-50"></textarea>
+                            class="w-full p-1 border border-gray-200 focus:outline-none focus:border-black transition-colors resize-none placeholder:text-gray-300 disabled:bg-gray-50"></textarea>
 
                         <div class="pt-2">
                             <button type="submit" :disabled="isSubmitting"
-                                class="w-full p-3 bg-[#D9D9D9] text-gray-600 hover:bg-gray-300 transition-colors uppercase tracking-widest text-sm flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed">
+                                class="w-full p-2 bg-[#D9D9D9] text-gray-600 hover:bg-gray-300 transition-colors uppercase tracking-widest text-sm flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed">
                                 <span v-if="isSubmitting"
                                     class="w-4 h-4 border-2 border-gray-600 border-t-transparent rounded-full animate-spin"></span>
                                 {{ isSubmitting ? 'Sending...' : t('contact.form.submit') }}
@@ -194,51 +191,30 @@ const followIcons = [
                     </div>
                 </div>
 
-                <!-- Contact us -->
-                <div class="space-y-4">
-                    <h4 class="text-sm font-medium">{{ t('contact.section.contact_us') }}</h4>
-                    <div class="space-y-4">
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-black rounded-full flex items-center justify-center p-2 shadow-sm">
-                                <img src="/assets/contact/phone.png"
-                                    class="w-full h-full object-contain invert grayscale" alt="" />
-                            </div>
-                            <a :href="`tel:${data.tel.replace(/\s+/g, '')}`"
-                                class="text-sm md:text-base hover:underline">{{
-                                    data.tel }}</a>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-black rounded-full flex items-center justify-center p-2 shadow-sm">
-                                <img src="/assets/contact/mail.png"
-                                    class="w-full h-full object-contain invert grayscale" alt="" />
-                            </div>
-                            <a :href="`mailto:${data.email}`" class="text-sm md:text-base hover:underline">{{ data.email
-                                }}</a>
-                        </div>
-                    </div>
-                </div>
 
                 <!-- Message us -->
                 <div class="space-y-4">
                     <h4 class="text-sm font-medium">{{ t('contact.section.message_us') }}</h4>
-                    <div class="flex gap-4">
-                        <div v-for="icon in messageIcons" :key="icon.name"
-                            class="w-12 h-12 bg-black rounded-full flex items-center justify-center p-2 cursor-pointer hover:scale-105 transition-transform">
-                            <img :src="icon.img" :alt="icon.name"
-                                class="w-full h-full object-contain invert grayscale" />
-                        </div>
+                    <div class="grid grid-cols-6 max-w-sm">
+                        <component :is="icon.link ? 'a' : 'div'" v-for="icon in contactIcons" :key="icon.name"
+                            :href="icon.link || null" :target="icon.link ? '_blank' : null"
+                            class="w-12 h-12 bg-white rounded-full flex items-center justify-center p-2 cursor-pointer hover:scale-105 transition-transform">
+                            <img :src="icon.img" :alt="icon.name" class="w-full h-full object-contain"
+                                :class="{ 'invert grayscale': !icon.noInvert }" />
+                        </component>
                     </div>
                 </div>
 
                 <!-- Follow us -->
                 <div class="space-y-4">
                     <h4 class="text-sm font-medium">{{ t('contact.section.follow_us') }}</h4>
-                    <div class="grid grid-cols-5 md:flex md:flex-wrap gap-4 max-w-sm">
-                        <div v-for="icon in followIcons" :key="icon.name"
-                            class="w-11 h-11 bg-black rounded-full flex items-center justify-center p-2 cursor-pointer hover:scale-105 transition-transform">
-                            <img :src="icon.img" :alt="icon.name"
-                                class="w-full h-full object-contain invert grayscale" />
-                        </div>
+                    <div class="grid grid-cols-5 gap-4 max-w-sm">
+                        <component :is="icon.link ? 'a' : 'div'" v-for="icon in followIcons" :key="icon.name"
+                            :href="icon.link || null" :target="icon.link ? '_blank' : null"
+                            class="w-11 h-11 bg-white rounded-full flex items-center justify-center p-2 cursor-pointer hover:scale-105 transition-transform">
+                            <img :src="icon.img" :alt="icon.name" class="w-full h-full object-contain"
+                                :class="{ 'invert grayscale': !icon.noInvert }" />
+                        </component>
                     </div>
                 </div>
             </div>
