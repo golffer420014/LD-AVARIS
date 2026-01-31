@@ -22,12 +22,12 @@ const currentLang = computed(() => props.lang);
 
 <template>
     <div class="mx-auto text-gray-800 space-y-12 py-12">
-        <h2 :class="{
+        <h1 :class="{
             'text-[18px] md:text-[30px]': currentLang === 'th',
             'text-[18px] md:text-[30px] tracking-[0.2em] uppercase text-center': currentLang === 'en',
         }" class="text-center text-black max-w-3xl mx-auto">
             {{ t("manpower.services.title") }}
-        </h2>
+        </h1>
 
         <p :class="{
             'text-[.65em] md:text-[1.2em] leading-relaxed': currentLang === 'th',

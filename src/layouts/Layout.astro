@@ -7,6 +7,34 @@ import { getLangFromUrl, useTranslations } from "../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const currentPath = Astro.url.pathname;
+const domain = "https://avaris.co.th";
+const canonicalURL = new URL(Astro.url.pathname, domain);
+
+const thPath = lang === "en" ? currentPath.replace("/en", "") : currentPath;
+const enPath = lang === "th" ? `/en${currentPath}` : currentPath;
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "AVARIS - Avaris International Manpower Co., Ltd.",
+  url: domain,
+  logo: `${domain}/assets/logo.png`,
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+66-88-686-6880",
+    contactType: "customer service",
+    email: "contact@avaris.co.th",
+    areaServed: "TH",
+    availableLanguage: ["Thai", "English"],
+  },
+  sameAs: [
+    "https://www.facebook.com/AvarisManpower",
+    "https://www.instagram.com/avarismanpower",
+    "https://www.youtube.com/@AvarisManpower",
+    "https://www.tiktok.com/@avarismanpower",
+    "https://x.com/AvarisManpower",
+  ],
+};
 ---
 
 <!doctype html>
@@ -20,6 +48,38 @@ const currentPath = Astro.url.pathname;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>{t("site.title")}</title>
     <meta name="description" content={t("site.description")} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Alternate Languages -->
+    <link rel="alternate" hreflang="th" href={new URL(thPath, domain)} />
+    <link rel="alternate" hreflang="en" href={new URL(enPath, domain)} />
+    <link rel="alternate" hreflang="x-default" href={new URL(thPath, domain)} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={t("site.title")} />
+    <meta property="og:description" content={t("site.description")} />
+    <meta
+      property="og:image"
+      content={new URL("/assets/og-image.jpg", domain)}
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={t("site.title")} />
+    <meta property="twitter:description" content={t("site.description")} />
+    <meta
+      property="twitter:image"
+      content={new URL("/assets/og-image.jpg", domain)}
+    />
+
+    <!-- Structured Data -->
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(structuredData)}
+    />
   </head>
   <body class="h-screen overflow-hidden bg-base">
     <div class="h-full overflow-y-scroll overflow-x-hidden relative">

@@ -150,8 +150,8 @@ export const ui = {
         'manpower.tabs.workforces.desc': 'เราจัดการกำลังคนที่หลากหลายในหลายอุตสาหกรรม โดยมั่นใจว่าพนักงานทุกคนได้รับการติดตั้งทักษะและการสนับสนุนที่จำเป็นต่อความเป็นเลิศ',
         'manpower.tabs.clients.desc': 'ลูกค้าของเรามีตั้งแต่บริษัทข้ามชาติไปจนถึงธุรกิจขนาดเล็ก เราภูมิใจในการส่งมอบโซลูชันกำลังคนตามความต้องการเฉพาะของลูกค้า',
         'manpower.tabs.contact.desc': 'ติดต่อเราเพื่อหารือเกี่ยวกับความต้องการด้านกำลังคนของคุณ เราพร้อมช่วยคุณค้นหาบุคลากรที่เหมาะสมสำหรับธุรกิจของคุณ',
-        'site.title': 'AVARIS - บริษัทจัดหางาน อวาริส อินเตอร์เนชั่นแนล จำกัด',
-        'site.description': 'บริการจัดหางานและกำลังคนระหว่างประเทศแบบครบวงจร',
+        'site.title': 'AVARIS Manpower - บริษัทจัดหางาน อวาริส อินเตอร์เนชั่นแนล จำกัด | บริการจัดหางานต่างประเทศ',
+        'site.description': 'AVARIS ให้บริการจัดหางานและกำลังคนระหว่างประเทศแบบครบวงจร สรรหาแรงงานไทยที่มีทักษะไปทำงานต่างประเทศอย่างถูกต้องตามกฎหมาย ครอบคลุมหลายอุตสาหกรรมทั่วโลก',
         'footer.rights': '© {year} บริษัทจัดหางาน อวาริส อินเตอร์เนชั่นแนล จำกัด ภายใต้ลิขสิทธิ์ เป็นบริษัทย่อยภายใต้ บริษัท อวาริส กรุ๊ป จำกัด',
     },
     en: {
@@ -295,8 +295,8 @@ export const ui = {
         'manpower.tabs.workforces.desc': 'We manage diverse workforces across multiple industries, ensuring that every employee is equipped with the skills and support they need to excel.',
         'manpower.tabs.clients.desc': 'Our clients range from small startups to multinational corporations. We pride ourselves on delivering tailored manpower solutions that meet their unique needs.',
         'manpower.tabs.contact.desc': 'Get in touch with us to discuss your manpower requirements. We\'re here to help you find the right talent for your business.',
-        'site.title': 'AVARIS - Avaris International Manpower Co., Ltd.',
-        'site.description': 'Comprehensive international recruitment and manpower services.',
+        'site.title': 'AVARIS Manpower - Avaris International Manpower Co., Ltd. | International Recruitment Services',
+        'site.description': 'AVARIS provides comprehensive international recruitment and manpower services, sourcing skilled Thai workers for global industries with legal compliance and professional assurance.',
         'footer.rights': '@ {year} Avaris International Manpower Co., Ltd. All rights reserved. Subsidiary of Avaris Group Co., Ltd.',
     },
 } as const;

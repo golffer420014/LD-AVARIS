@@ -1,6 +1,7 @@
 <script setup>
 import { computed, reactive, ref } from 'vue';
 import { ui, defaultLang, flagEN } from '@/i18n/ui';
+import { PhoneCall } from 'lucide-vue-next';
 
 const props = defineProps({
     data: {
@@ -116,8 +117,9 @@ const followIcons = [
                             class="w-full p-1 border border-gray-200 focus:outline-none focus:border-black transition-colors placeholder:text-gray-300 disabled:bg-gray-50" />
 
                         <div class="flex gap-2">
-                            <div class="flex items-center justify-center p-1 px-2 border border-gray-200 bg-white">
+                            <div class="flex items-center justify-center p-1 px-2 border border-gray-200">
                                 <img :src="flagEN" alt="US" class="w-6 h-4 object-cover" />
+                                <!-- <PhoneCall class="w-5 h-5" /> -->
                             </div>
                             <input v-model="form.phone" type="tel" :placeholder="t('contact.form.phone')" required
                                 :disabled="isSubmitting"
