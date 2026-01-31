@@ -24,7 +24,7 @@ const currentPath = Astro.url.pathname;
   <body class="h-screen overflow-hidden bg-base">
     <div class="h-full overflow-y-scroll overflow-x-hidden relative">
       <Navbar lang={lang} currentPath={currentPath} client:load />
-      <slot />
+      <div class="min-h-[calc(100vh)]"><slot /></div>
       <Footer />
     </div>
   </body>

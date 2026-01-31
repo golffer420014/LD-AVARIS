@@ -29,7 +29,7 @@ const currLang = computed(() => props.lang);
             </div>
 
             <!-- Country Sectors -->
-            <div class="grid grid-cols-1 md:grid-cols-5 text-xs md:text-sm gap-4 md:gap-0">
+            <div class="grid grid-cols-1 md:grid-cols-5 text-xs md:text-[12px] gap-4 md:gap-0">
                 <div v-for="(sector, sIndex) in country.sectors" :key="sIndex" class="flex flex-col">
                     <!-- Sector Header -->
                     <div class="border border-gray-300 bg-white p-3 md:p-2 text-center"
@@ -44,7 +44,8 @@ const currLang = computed(() => props.lang);
                             <li v-for="(client, clIndex) in sector.clients" :key="clIndex"
                                 class="flex items-start space-x-1 font-light"
                                 :class="{ 'col-span-2': sector.clients.length === 1 }">
-                                <span class="w-1 h-1 mr-1 rounded-full bg-black shrink-0 my-auto"></span>
+                                <span
+                                    class="w-1 h-1 md:w-0.5 md:h-0.5 mx-2 rounded-full bg-black shrink-0 my-auto"></span>
                                 <span>{{ client }}</span>
                             </li>
                         </ul>
