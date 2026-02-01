@@ -126,7 +126,7 @@ const followIcons = [
                         :disabled="isSubmitting"
                         class="w-full p-2 border border-gray-200 focus:outline-none focus:border-black transition-colors placeholder:text-gray-300 disabled:bg-gray-50" />
 
-                    <textarea v-model="form.message" :placeholder="t('contact.form.message')" rows="3" required
+                    <textarea v-model="form.message" :placeholder="t('contact.form.message')" rows="4" required
                         :disabled="isSubmitting"
                         class="w-full p-2 border border-gray-200 focus:outline-none focus:border-black transition-colors resize-none placeholder:text-gray-300 disabled:bg-gray-50"></textarea>
 
