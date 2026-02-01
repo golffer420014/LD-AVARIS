@@ -85,7 +85,6 @@ const contactIcons = [
     { name: 'phone', img: '/assets/contact/phone.png', link: 'tel:+66886866880' },
     { name: 'line', img: '/assets/contact/line.png', link: 'https://lin.ee/c97zL5' },
     { name: 'whatsapp', img: '/assets/contact/whatsapp.png', link: 'https://wa.me/message/L76U6AEG7OR7P1' },
-    { name: 'wechat', img: '/assets/contact/wechat.png', link: '', noInvert: true },
     { name: 'mail', img: '/assets/contact/mail.png', link: 'mailto:contact@avaris.co.th' },
 ];
 
@@ -196,13 +195,12 @@ const followIcons = [
 
                 <!-- Message us -->
                 <div class="space-y-4">
-                    <h4 class="text-sm font-medium">{{ t('contact.section.message_us') }}</h4>
-                    <div class="grid grid-cols-6 max-w-sm">
+                    <h4 class="text-sm font-medium">{{ t('contact.section.contact_us') }}</h4>
+                    <div class="grid grid-cols-4 max-w-sm">
                         <component :is="icon.link ? 'a' : 'div'" v-for="icon in contactIcons" :key="icon.name"
                             :href="icon.link || null" :target="icon.link ? '_blank' : null"
-                            class="w-12 h-12 bg-white rounded-full flex items-center justify-center p-2 cursor-pointer hover:scale-105 transition-transform">
-                            <img :src="icon.img" :alt="icon.name" class="w-full h-full object-contain"
-                                :class="{ 'invert grayscale': !icon.noInvert }" />
+                            class="w-16 h-16 rounded-full flex items-center justify-center p-2 cursor-pointer hover:scale-105 transition-transform">
+                            <img :src="icon.img" :alt="icon.name" class="w-full h-full object-contain" />
                         </component>
                     </div>
                 </div>
@@ -210,12 +208,11 @@ const followIcons = [
                 <!-- Follow us -->
                 <div class="space-y-4">
                     <h4 class="text-sm font-medium">{{ t('contact.section.follow_us') }}</h4>
-                    <div class="grid grid-cols-5 gap-4 max-w-sm">
+                    <div class="grid grid-cols-4 gap-4 max-w-sm">
                         <component :is="icon.link ? 'a' : 'div'" v-for="icon in followIcons" :key="icon.name"
                             :href="icon.link || null" :target="icon.link ? '_blank' : null"
-                            class="w-11 h-11 bg-white rounded-full flex items-center justify-center p-2 cursor-pointer hover:scale-105 transition-transform">
-                            <img :src="icon.img" :alt="icon.name" class="w-full h-full object-contain"
-                                :class="{ 'invert grayscale': !icon.noInvert }" />
+                            class="w-16 h-16 rounded-full flex items-center justify-center p-2 cursor-pointer hover:scale-105 transition-transform">
+                            <img :src="icon.img" :alt="icon.name" class="w-full h-full object-contain" />
                         </component>
                     </div>
                 </div>
