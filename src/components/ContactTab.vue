@@ -196,7 +196,7 @@ const followIcons = [
                 <!-- Message us -->
                 <div class="space-y-4">
                     <h4 class="text-sm font-medium">{{ t('contact.section.contact_us') }}</h4>
-                    <div class="grid grid-cols-4 max-w-sm">
+                    <div class="grid grid-cols-4 gap-4">
                         <component :is="icon.link ? 'a' : 'div'" v-for="icon in contactIcons" :key="icon.name"
                             :href="icon.link || null" :target="icon.link ? '_blank' : null"
                             class="w-16 h-16 rounded-full flex items-center justify-center p-2 cursor-pointer hover:scale-105 transition-transform">
@@ -208,7 +208,7 @@ const followIcons = [
                 <!-- Follow us -->
                 <div class="space-y-4">
                     <h4 class="text-sm font-medium">{{ t('contact.section.follow_us') }}</h4>
-                    <div class="grid grid-cols-4 gap-4 max-w-sm">
+                    <div class="grid grid-cols-4 gap-4">
                         <component :is="icon.link ? 'a' : 'div'" v-for="icon in followIcons" :key="icon.name"
                             :href="icon.link || null" :target="icon.link ? '_blank' : null"
                             class="w-16 h-16 rounded-full flex items-center justify-center p-2 cursor-pointer hover:scale-105 transition-transform">
