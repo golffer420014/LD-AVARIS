@@ -209,8 +209,9 @@ const followIcons = [
                 <div class="w-full h-[300px] md:h-[500px] bg-gray-50 overflow-hidden border border-gray-100">
                     <div class="embed-map-fixed">
                         <div class="embed-map-container">
-                            <iframe class="embed-map-frame" frameborder="0" scrolling="no" marginheight="0"
-                                marginwidth="0" :src="t('contact.map_url')"></iframe>
+                            <iframe class="embed-map-frame" frameborder="0" referrerpolicy="no-referrer-when-downgrade"
+                                allowfullscreen scrolling="no" marginheight="0" marginwidth="0"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3426.509024495541!2d100.5576676!3d13.7402882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!14f0!3m3!1m2!1s0x30e29f95b2f57577%3A0x64e676474aacb186!2sAvaris%20Co.%2C%20Ltd.!5e0!3m2!1sth!2sth"></iframe>
                             <a href="https://funclicker.org" style="display: none;">Fun Clicker</a>
                         </div>
                     </div>
