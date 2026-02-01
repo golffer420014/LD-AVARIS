@@ -161,11 +161,11 @@ const followIcons = [
 
                         <div class="space-y-2">
                             <p>
-                                <span class="font-medium">Tax License No : </span>
+                                <span>{{ t('contact.label.tax') }}</span>
                                 {{ data.taxId }}
                             </p>
                             <p>
-                                <span class="font-medium">Oversea Employment License No. </span>
+                                <span>{{ t('contact.label.license') }}</span>
                                 {{ data.license }}
                             </p>
                         </div>
