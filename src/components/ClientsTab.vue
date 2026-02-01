@@ -46,7 +46,7 @@ const currLang = computed(() => props.lang);
                                 :class="{ 'col-span-2': sector.clients.length === 1 }">
                                 <span
                                     class="w-1 h-1 md:w-0.5 md:h-0.5 mx-2 rounded-full bg-black shrink-0 my-auto"></span>
-                                <span>{{ client }}</span>
+                                <span class="my-auto">{{ client }}</span>
                             </li>
                         </ul>
                     </div>

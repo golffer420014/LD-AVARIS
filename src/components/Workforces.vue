@@ -45,7 +45,7 @@ const chunkedData = computed(() => {
                                 class="flex items-start space-x-1 font-light">
                                 <span
                                     class="w-1 h-1 md:w-0.5 md:h-0.5 mx-2 rounded-full bg-black shrink-0 my-auto"></span>
-                                <span>{{ role }}</span>
+                                <span class="my-auto">{{ role }}</span>
                             </li>
                         </ul>
                     </div>
