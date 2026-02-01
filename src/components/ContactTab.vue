@@ -101,7 +101,7 @@ const followIcons = [
 </script>
 
 <template>
-    <div class="mx-auto px-4 md:px-0 text-gray-800 space-y-12 py-12">
+    <div class="mx-auto px-4 md:px-0 text-gray-800 space-y-12 py-4 md:py-12">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
             <!-- Left Side: Enquiry Form -->
             <div class="order-1 col-span-1 md:col-span-2 bg-white p-4 md:p-10 border border-gray-100">
@@ -129,7 +129,7 @@ const followIcons = [
 
                     <div class="pt-4">
                         <button type="submit" :disabled="isSubmitting"
-                            class="w-full p-3 bg-[#D9D9D9] text-[#424242] hover:bg-gray-300 transition-colors tracking-[0.2em] text-sm flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed font-medium">
+                            class="w-full p-3 bg-[#D9D9D9] text-[#424242] uppercase text-xs hover:bg-gray-300 transition-colors tracking-[0.2em] flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed font-medium">
                             <span v-if="isSubmitting"
                                 class="w-4 h-4 border-2 border-gray-600 border-t-transparent rounded-full animate-spin"></span>
                             {{ isSubmitting ? 'Sending...' : t('contact.form.submit') }}
@@ -202,8 +202,7 @@ const followIcons = [
             </div>
 
             <!-- Bottom Section: Map -->
-            <div
-                class="order-2 md:order-3 col-span-1 md:col-span-4 bg-white px-4 pt-4 md:px-10 md:pt-10 h-full border border-gray-100">
+            <div class="order-2 md:order-3 col-span-1 md:col-span-4 bg-white p-4 md:p-6 h-full border border-gray-100">
                 <div class="text-lg md:text-2xl font-medium mb-6">
                     {{ t('contact.map.title') || 'Office Location' }}
                 </div>
