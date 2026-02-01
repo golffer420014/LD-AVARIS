@@ -10,6 +10,7 @@ export const defaultLang = 'th';
 
 export const ui = {
     th: {
+        'construction': 'หน้านี้อยู่ระหว่างกำลังปรับปรุง',
         'nav.property': 'อสังหาริมทรัพย์',
         'nav.manpower': 'จัดหางานต่างประเทศ',
         'nav.placement': 'จัดหางานในไทย',
@@ -154,6 +155,7 @@ export const ui = {
         'footer.rights': '© {year} บริษัทจัดหางาน อวาริส อินเตอร์เนชั่นแนล จำกัด ภายใต้ลิขสิทธิ์ เป็นบริษัทย่อยภายใต้ บริษัท อวาริส กรุ๊ป จำกัด',
     },
     en: {
+        'construction': 'This page is under construction',
         'nav.property': 'Property',
         'nav.manpower': 'Manpower',
         'nav.placement': 'Placement',
