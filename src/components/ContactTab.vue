@@ -83,7 +83,7 @@ const handleSubmit = async () => {
 // Icons grouping for the new design
 const contactIcons = [
     { name: 'phone', img: '/assets/contact/phone.png', link: 'tel:+66886866880' },
-    { name: 'line', img: '/assets/contact/line.png', link: 'https://lin.ee/c97zL5' },
+    { name: 'line', img: '/assets/contact/line.png', link: 'https://lin.ee/IN4GTVi' },
     { name: 'whatsapp', img: '/assets/contact/whatsapp.png', link: 'https://wa.me/message/L76U6AEG7OR7P1' },
     { name: 'mail', img: '/assets/contact/mail.png', link: 'mailto:contact@avaris.co.th' },
 ];
@@ -101,11 +101,11 @@ const followIcons = [
 </script>
 
 <template>
-    <div class="py-8 px-4 md:px-0 md:pt-14 max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+    <div class="mx-auto px-4 md:px-0 text-gray-800 space-y-12 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
             <!-- Left Side: Enquiry Form -->
             <div class="order-1 col-span-1 md:col-span-2 bg-white p-4 md:p-10 border border-gray-100">
-                <div class="text-xl md:text-2xl font-serif mb-6">
+                <div class="text-lg md:text-2xl font-medium mb-6">
                     {{ t('contact.form.title') }}
                 </div>
                 <form class="space-y-4" @submit.prevent="handleSubmit">
@@ -114,9 +114,6 @@ const followIcons = [
                         class="w-full p-2 border border-gray-200 focus:outline-none focus:border-black transition-colors placeholder:text-gray-300 disabled:bg-gray-50" />
 
                     <div class="flex gap-2">
-                        <div class="flex items-center justify-center p-2 border border-gray-200 bg-white">
-                            <img :src="flagEN" alt="US" class="w-6 h-4 object-cover" />
-                        </div>
                         <input v-model="form.phone" type="tel" :placeholder="t('contact.form.phone')" required
                             :disabled="isSubmitting"
                             class="flex-1 p-2 border border-gray-200 focus:outline-none focus:border-black transition-colors placeholder:text-gray-300 disabled:bg-gray-50" />
@@ -132,7 +129,7 @@ const followIcons = [
 
                     <div class="pt-4">
                         <button type="submit" :disabled="isSubmitting"
-                            class="w-full p-3 bg-[#D9D9D9] text-[#424242] hover:bg-gray-300 transition-colors uppercase tracking-[0.2em] text-sm flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed font-medium">
+                            class="w-full p-3 bg-[#D9D9D9] text-[#424242] hover:bg-gray-300 transition-colors tracking-[0.2em] text-sm flex items-center justify-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed font-medium">
                             <span v-if="isSubmitting"
                                 class="w-4 h-4 border-2 border-gray-600 border-t-transparent rounded-full animate-spin"></span>
                             {{ isSubmitting ? 'Sending...' : t('contact.form.submit') }}
@@ -155,7 +152,7 @@ const followIcons = [
             <div
                 class="order-3 md:order-2 col-span-1 md:col-span-2 bg-white p-4 md:p-10 border border-gray-100 flex flex-col justify-between">
                 <div class="space-y-8">
-                    <h3 class="text-lg md:text-2xl font-serif leading-tight">
+                    <h3 class="text-xl md:text-2xl font-medium leading-tight">
                         {{ data.company }}
                     </h3>
 
@@ -205,8 +202,9 @@ const followIcons = [
             </div>
 
             <!-- Bottom Section: Map -->
-            <div class="order-2 md:order-3 col-span-1 md:col-span-4 bg-white p-4 md:p-10 border border-gray-100">
-                <div class="text-xl md:text-2xl font-serif mb-6">
+            <div
+                class="order-2 md:order-3 col-span-1 md:col-span-4 bg-white px-4 pt-4 md:px-10 md:pt-10 h-full border border-gray-100">
+                <div class="text-lg md:text-2xl font-medium mb-6">
                     {{ t('contact.map.title') || 'Office Location' }}
                 </div>
                 <div class="w-full h-[300px] md:h-[500px] bg-gray-50 overflow-hidden border border-gray-100">
