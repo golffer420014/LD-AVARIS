@@ -126,8 +126,8 @@ export const ui = {
         ],
         'manpower.contact': {
             company: 'บริษัทจัดหางาน อวาริส อินเตอร์เนชั่นแนล จำกัด',
-            address: '10/86 ชั้น 6 อาคาร เดอะ เทรนดี้ ออฟฟิศ, ซอยสุขุมวิท 13 ถนนสุขุมวิท, แขวงคลองเตยเหนือ, เขตวัฒนา, กรุงเทพฯ 10110',
-            taxId: '0105565177544',
+            address: '10/96 ชั้น 6 อาคาร เดอะ เทรนดี้ ออฟฟิศ, ซอยสุขุมวิท 13 ถนนสุขุมวิท, แขวงคลองเตยเหนือ, เขตวัฒนา, กรุงเทพฯ 10110',
+            taxId: '0105569028128',
             license: 'Tor.101/2569',
             tel: '(+66) 088-686-6880',
             email: 'contact@avaris.co.th'
@@ -270,8 +270,8 @@ export const ui = {
         ],
         'manpower.contact': {
             company: 'Avaris International Manpower Co., Ltd.',
-            address: '10/86 - Floor 6, The Trendy Office Building, Soi Sukhumvit 13, Sukhumvit Rd., Khlong Toei Nuea Subdistrict, Watthana District, Bangkok 10110',
-            taxId: '0105565177544',
+            address: '10/96 - Floor 6, The Trendy Office Building, Soi Sukhumvit 13, Sukhumvit Rd., Khlong Toei Nuea Subdistrict, Watthana District, Bangkok 10110',
+            taxId: '0105569028128',
             license: 'Tor.101/2569',
             tel: '(+66) 088-686-6880',
             email: 'contact@avaris.co.th'
